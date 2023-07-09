@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Aesthetic';
+    src: url('./assets/font/Aesthetic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Firesidedemo';
+    src: url('./assets/font/Firesidedemo-0WB1d.otf') format('truetype');
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: white;
+    font-family: 'Firesidedemo', 'Aesthetic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
