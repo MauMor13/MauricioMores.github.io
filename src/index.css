@@ -10,7 +10,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #000000;
     color: white;
-    font-family: 'Firesidedemo', 'Aesthetic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;
 }

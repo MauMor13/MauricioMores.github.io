@@ -1,42 +1,98 @@
 import ButtonNav from './ButtonNav';
+import { useState, useEffect } from 'react';
 import { Outlet, Link } from "react-router-dom";
 import styled from 'styled-components';
 
-
-const NavBar = styled.header `
+const NavBar = styled.header`
+    background-color: black;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 7rem;
+    height: 6rem;
 `;
 const Nav = styled.nav` 
-    width: 40rem;
+    padding: 2rem;
+    width: 35rem;
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: space-between;
+    align-items: center;
 `;
-const Img = styled.div `
-    background-image: url(src/assets/image/svg_20230707_232204_0000.svg);
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    background-color: transparent;
-    top: .3rem;
-    left: .3rem;
+const Img = styled.img`
     width: 10rem;
     height: 10rem;
+    padding-top: 1rem;
+    background-color: transparent;
+`;
+const NavMenu = styled.div`
+    margin: 2rem;
+    width: 3rem;
+    height: 2rem;
+    position: relative;
+    span:first-child { 
+        background-color: #7100F1;
+        width: 100%;
+        position: absolute;
+        top: 3px;
+        height: 4px;
+        border-radius: 1rem;
+        display: block;
+    }
+    span:nth-child(2){
+        background-color: #7100F1;
+        width: 80%;
+        height: 4px;
+        position: absolute;
+        top: 13px;
+        right: 0;
+        border-radius: 1rem;
+        display: block;
+    }
+    span:nth-child(3){
+        background-color: #7100F1;
+        position: absolute;
+        top: 24px;
+        right: 0;
+        width: 60%;
+        height: 4px;
+        border-radius: 1rem;
+        display: block;
+    }
+    &:hover{
+    span:first-child, 
+    span:nth-child(2),
+    span:nth-child(3){
+        background-color: white;
+    }
+    }
 `;
 
 const Header = () => {
+    const [screenSize, setScreenSize] = useState(window.innerWidth);
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenSize(window.innerWidth);
+        };
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <NavBar>
-            <Img></Img>
-            <Nav>
-                <Link to="/"><ButtonNav text="Home"/></Link>
-                <Link to="/About"><ButtonNav text="About me"/></Link>
-                <Link to="/Contact"><ButtonNav text="Contact"/></Link>
-            </Nav>
+            <Img src='src/assets/image/svg_20230707_232204_0000.svg'></Img>
+            {screenSize < 700 ? <NavMenu>
+                <span></span>
+                <span></span>
+                <span></span>
+            </NavMenu> :
+                <Nav>
+                    <Link to="/"><ButtonNav text="Home" /></Link>
+                    <Link to="/About"><ButtonNav text="About me" /></Link>
+                    <Link to="/Technologies"><ButtonNav text="Technologies" /></Link>
+                    <Link to="/Projects"><ButtonNav text="Projects" /></Link>
+                    <Link to="/Contact"><ButtonNav text="Contact" /></Link>
+                </Nav>}
             <Outlet />
         </NavBar>
     );

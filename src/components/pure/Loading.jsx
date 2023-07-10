@@ -1,26 +1,44 @@
 import styled from "styled-components";
 
-const LoadingContainer = styled.article`
-    width: 100%;
-    height: 100%;
+
+const Container = styled.div` 
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-`; 
+`;
 const Img = styled.div`
-    background-image: url("src/assets/image/svg_20230707_232204_0000.svg");
+    background-image: url(src/assets/image/svg_20230707_232204_0000.svg);
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    width: 30%;
-    height: 30%;
-`; 
+    background-color: transparent;
+    width: 40vw;
+    height: 40vw;
+    animation: heartBeat 1.5s infinite;
+    
+    @keyframes heartBeat {
+        0% {
+            filter: opacity(100%);
+            transform: scale(1);
+            box-shadow: inset;
+        }
+        50% {
+            filter: opacity(30%);
+            transform: scale(1.2);
+        }
+        100% {
+            filter: opacity(100%);
+            transform: scale(1);
+        }
+    }
+`;
 
 const Loading = () => {
     return (
-        <LoadingContainer>
+        <Container>
             <Img></Img>
-        </LoadingContainer>
+        </Container>
     );
 }
 

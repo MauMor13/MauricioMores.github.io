@@ -1,5 +1,0 @@
-.container_body{
-    display: grid;
-    grid-template-rows: 10fr minmax(auto, 1fr) 7fr;
-    min-height: 100vh;
-}

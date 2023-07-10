@@ -2,15 +2,16 @@ import PropTypes from 'prop-types';
 import { styled } from 'styled-components';
 
 const Btn = styled.button`
+font-family: 'Aesthetic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: .5rem;
+    background-color: black;
     border: none;
-    border: 1px solid #7100F1;
     border-radius: .5rem ;
     font-size: 1rem;
     color: white;
     position: relative;
     overflow: hidden;
-    transition: .5s all ;
+    transition: 1.5s all ;
     
     &:after,&:before {
         content: '';
@@ -20,7 +21,7 @@ const Btn = styled.button`
         left: -3rem;
         transform: translateX(-50%);
         background-color: #7100F1;
-        transition: 1s all ;
+        transition: 1.5s all ;
     }
 
     &:after{
@@ -33,11 +34,10 @@ const Btn = styled.button`
     }
     &:hover {
         color: #7100F1;
-        border: 1px solid #7100F1;
-        border-radius: .5rem ;
+        border: none;
 
     &:after,&:before {
-        left: 10rem;
+        left: 6.5rem;
     }
     }
     `;
@@ -50,6 +50,6 @@ const ButtonNav = ({ text }) => {
     );
 }
 ButtonNav.prototype = {
-    text: PropTypes.string,
+    propstext: PropTypes.string,
 }
 export default ButtonNav;
