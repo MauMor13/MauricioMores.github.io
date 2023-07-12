@@ -35,9 +35,9 @@ const Article = styled.article`
 `;
 
 const ToBlink = styled.div`
-    animation: alternate 1s infinite;
-
-    @keyframes alternate {
+    display: inline-block;
+    animation:  blinkAnimation 1s infinite;
+    @keyframes  blinkAnimation {
         0% {
             opacity: 0;
         }
@@ -52,29 +52,27 @@ const ToBlink = styled.div`
     }`;
 
 const Home = () => {
-    const text = ' hola';
-    /* `En este espacio, les presento un recorrido por mis logros,
+    const text = `En este espacio, les presento un recorrido por mis logros,
     habilidades y proyectos destacados. Cada elemento ha sido cuidadosamente
     seleccionado para reflejar mi dedicación, experiencia y visión única en el campo
     del desarrollo web y la programación en todo su esplendor.
     ¡Los invito a explorar mi portafolio y a descubrir cómo juntos podemos
     hacer realidad grandes ideas! No dudes en contactarme para futuras colaboraciones o cualquier
-    consulta que puedas tener.`;*/
+    consulta que puedas tener.`;
 
     const textRef = useRef(null);
-
     useEffect(() => {
         const element = textRef.current;
         let index = 0;
-        let time = 100;
-        writingChar();
+        let time = 50;
+            writingChar();
         function writingChar() {
-            let timeMax = 60;
-            let timeMin = 30;
+            let timeMax = 150;
+            let timeMin = 50;
             if (text.charAt(index) == " ") {
                 time = Math.random() * (timeMax - timeMin) + timeMin;
             } else {
-                time = 100;
+                time = 50;
             }
             if (index < text.length) {
                 element.innerHTML += text.charAt(index);
@@ -92,7 +90,6 @@ const Home = () => {
                     <TextOne><span ref={textRef}></span>
                     <ToBlink>│</ToBlink>
                     </TextOne>
-                    
                 </div>
             </Article>
         </Main>

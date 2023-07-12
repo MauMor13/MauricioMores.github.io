@@ -1,8 +1,8 @@
 const Technologies = () => {
     return (
-        <div>
+        <main>
             
-        </div>
+        </main>
     );
 }
 
