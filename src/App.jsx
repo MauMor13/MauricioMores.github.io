@@ -18,21 +18,24 @@ function App() {
       setIsLoading(false);
     }, 2000);
   }, []);
+  
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
-    isLoading ? <Loading /> : 
-    <>
-    <BrowserRouter class="container_body">
-    <Header/>
-    <Routes>
-        <Route index element={<Home />} />
-        <Route path="Contact" element={<Contact />} />
-        <Route path="About" element={<About />} />
-        <Route path="*" element={<NoPage />} />
-    </Routes>
-    <Footer/>
+    <BrowserRouter>
+    <div className="container_body">
+      <Header />
+        <Routes>
+            <Route index element={<Home />} />
+            <Route path="Contact" element={<Contact />} />
+            <Route path="About" element={<About />} />
+            <Route path="*" element={<NoPage />} />
+        </Routes>
+      <Footer/>
+    </div>
     </BrowserRouter>
-    </>
   )
 }
 export default App

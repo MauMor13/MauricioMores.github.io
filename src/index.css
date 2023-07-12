@@ -6,6 +6,14 @@
     font-family: 'Firesidedemo';
     src: url('./assets/font/Firesidedemo-0WB1d.otf') format('truetype');
 }
+@font-face {
+    font-family: 'Blouse';
+    src: url('src/assets/font/Blouse.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ElectroBox';
+    src: url('src/assets/font/eElectroBox.ttf') format('truetype');
+}
 *{
     padding: 0;
     margin: 0;

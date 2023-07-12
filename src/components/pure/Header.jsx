@@ -8,19 +8,21 @@ const NavBar = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
-    height: 6rem;
+    width: 100%;
 `;
 const Nav = styled.nav` 
-    padding: 2rem;
+    padding: 0 2rem 0 2rem;
     width: 35rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 `;
-const Img = styled.img`
+const Img = styled.div`
+    background-image: url(src/assets/image/svg_20230707_232204_0000.svg);
+    background-position: center;
+    background-size: cover;
     width: 10rem;
-    height: 10rem;
+    height: 8rem;
     padding-top: 1rem;
     background-color: transparent;
 `;
@@ -78,9 +80,10 @@ const Header = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    
     return (
         <NavBar>
-            <Img src='src/assets/image/svg_20230707_232204_0000.svg'></Img>
+            <Img/>
             {screenSize < 700 ? <NavMenu>
                 <span></span>
                 <span></span>

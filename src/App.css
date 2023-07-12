@@ -1,0 +1,12 @@
+.container_body{
+    min-height: 100vh;
+}
+Header{
+    min-height: 18vh;
+}
+Main {
+    min-height: 77vh;
+}
+Footer {
+    min-height: 5vh;
+}

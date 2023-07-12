@@ -1,8 +1,17 @@
+import { styled } from "styled-components";
+
+const Footer_Body = styled.footer `
+    background-color: white;
+`;
+const Title = styled.footer `
+    color: black;
+`;
+
 const Footer = () => {
     return (
-        <footer>
-        <h1>soy el footer</h1>
-        </footer>
+        <Footer_Body>
+        <Title>soy el footer</Title>
+        </Footer_Body>
     );
 }
 
