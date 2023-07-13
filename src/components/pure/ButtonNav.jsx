@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { styled } from 'styled-components';
 
 const Btn = styled.button`
-font-family: 'Aesthetic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Aesthetic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: .5rem;
     background-color: black;
     border: none;

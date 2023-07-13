@@ -1,16 +1,32 @@
 import { styled } from "styled-components";
 
 const Footer_Body = styled.footer `
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem 0 2rem;
 `;
-const Title = styled.footer `
-    color: black;
+const Text = styled.a `
+text-decoration: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 1rem 0 1rem;
+    &:hover{
+        border-bottom: 1px solid #7100F1;
+        border-radius:0 0 1rem 1rem;
+    } 
+`;
+const Signature = styled.span `
+    font-size: 1.3rem;
+    color: white;
+    font-family: 'Black_Ashpalt','Courier New', Courier, monospace;
 `;
 
 const Footer = () => {
     return (
         <Footer_Body>
-        <Title>soy el footer</Title>
+        <Text href="https://www.linkedin.com/in/mauricio-mores-b3898817b/"> Desarrollador Full Stack Java {'= ( ) =>'}
+        {'{'}<Signature>  Mauricio Mores </Signature>{'}'}</Text>
         </Footer_Body>
     );
 }
