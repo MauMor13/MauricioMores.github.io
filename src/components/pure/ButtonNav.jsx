@@ -8,7 +8,6 @@ const Btn = styled.button`
     border: none;
     border-radius: .5rem ;
     font-size: 1rem;
-    color: white;
     position: relative;
     overflow: hidden;
     transition: 1.5s all ;
@@ -33,7 +32,7 @@ const Btn = styled.button`
         transform: rotate(-45deg);
     }
     &:hover {
-        color: #7100F1;
+        color: #8f30fd;
         border: none;
 
     &:after,&:before {
@@ -50,6 +49,6 @@ const ButtonNav = ({ text }) => {
     );
 }
 ButtonNav.prototype = {
-    propstext: PropTypes.string,
+    text : PropTypes.string,
 }
 export default ButtonNav;

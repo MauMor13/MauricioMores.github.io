@@ -43,10 +43,10 @@ const About = () => {
                     y trabajo en equipo, como tambien poder sobrellevar los desafios de forma autonoma.`}/>
                     
                 </Article>
-                <ImgAbout></ImgAbout>
+                <ImgAbout imgOne='src/assets/image/MauricioMores.jpeg' imgTwo='src/assets/image/MauricioMores.jpeg'></ImgAbout>
             </Seccion>
             <Seccion>
-                <ImgAbout></ImgAbout>
+                <ImgAbout imgOne='' imgTwo=''></ImgAbout>
                 <Article>
                     <Title>Mi Pasion. . .</Title>
                     <WritingText text={`Disfruto mucho los desafios y el constante aprendizaje para poder construir o reparar 
@@ -55,13 +55,13 @@ const About = () => {
             </Seccion>
             <Seccion>
                 <Article>
-                    <Title>Lo que podras saber de mi. . .</Title>
+                    <Title>Mis Hobbis son. . .</Title>
                     <WritingText text={`Un profesional dedicado a innovar y aprender nuevas tecnologias 
                     para desarrollar y poder resolver todo tipo de problematicas. Destaco por mi gran enfoque 
                     y trabajo en equipo, como tambien poder sobrellevar los desafios de forma autonoma.`}/>
                     
                 </Article>
-                <ImgAbout></ImgAbout>
+                <ImgAbout imgOne='' imgTwo=''></ImgAbout>
             </Seccion>
         </Main>
     );

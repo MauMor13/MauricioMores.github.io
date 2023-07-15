@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import propTypes from '';
+import PropTypes from 'prop-types';
 
 const Img = styled.div`
     position: relative;
@@ -14,7 +14,7 @@ const Img = styled.div`
         width: 20rem;
         height: 15rem;
         border-radius: .5rem;
-        background-color: aliceblue;
+        background-image: url(${props => props.imgOne});
     }
     &:before{
         position: absolute;
@@ -25,15 +25,17 @@ const Img = styled.div`
         width: 20rem;
         height: 15rem;
         border-radius: .5rem;
-        background-color: lightblue;
+        background-image: url(${props => props.imgTwo});
     }
 `;
-const ImgAbout = (props) => {
+const ImgAbout = ({imgOne, imgTwo}) => {
     return (
-        <Img>
-            
-        </Img>
+        <Img imgOne={imgOne} imgTwo={imgTwo}></Img>
     );
+}
+ImgAbout.prototype = {
+    imgOne : PropTypes.string,
+    imgTwo : PropTypes.string
 }
 
 
