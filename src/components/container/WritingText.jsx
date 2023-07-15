@@ -5,7 +5,7 @@ import { useEffect , useRef } from "react";
 const TextOne = styled.span`
     font-family: 'Courier New', Courier, monospace;
     display: block;
-    min-height: 20rem;
+    min-height: 10rem;
     font-size: 1.3rem;
     padding-top: 1rem;
     text-align: center;

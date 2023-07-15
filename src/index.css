@@ -25,5 +25,8 @@
     color: white;
 }
 body{
-    background-color: black;
+    background-image: url(src/assets/image/rm380-02.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import ImgAbout from "../components/pure/ImgAbout";
 import WritingText from "../components/container/WritingText";
 
 const Main = styled.main`
@@ -12,13 +13,13 @@ const Main = styled.main`
 const Title = styled.h2`
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2rem;
+    width: min(50rem ,50rem);
     text-align: center;
 `;
 const Seccion = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     width: 100%;
     min-height: 25rem;
 `;
@@ -27,13 +28,8 @@ const Article = styled.article`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
-    height: 100%;
-`;
-const Img = styled.div`
-    width: 5rem;
-    height: 10rem;
-    background-color: aliceblue;
+    max-width: 50rem;
+    min-height: 100%;
 `;
 
 const About = () => {
@@ -47,16 +43,14 @@ const About = () => {
                     y trabajo en equipo, como tambien poder sobrellevar los desafios de forma autonoma.`}/>
                     
                 </Article>
-                <Img></Img>
+                <ImgAbout></ImgAbout>
             </Seccion>
             <Seccion>
-                <Img></Img>
+                <ImgAbout></ImgAbout>
                 <Article>
-                    <Title>Lo que podras saber de mi. . .</Title>
-                    <WritingText text={`Un profesional dedicado a innovar y aprender nuevas tecnologias 
-                    para desarrollar y poder resolver todo tipo de problematicas. Destaco por mi gran enfoque 
-                    y trabajo en equipo, como tambien poder sobrellevar los desafios de forma autonoma.`}/>
-                    
+                    <Title>Mi Pasion. . .</Title>
+                    <WritingText text={`Disfruto mucho los desafios y el constante aprendizaje para poder construir o reparar 
+                    todo tipo de cosas, desde codigo a diseños en 3D para imprimir o repara todo tipo de articulos electronicos o mecanicos.`}/>
                 </Article>
             </Seccion>
             <Seccion>
@@ -67,7 +61,7 @@ const About = () => {
                     y trabajo en equipo, como tambien poder sobrellevar los desafios de forma autonoma.`}/>
                     
                 </Article>
-                <Img></Img>
+                <ImgAbout></ImgAbout>
             </Seccion>
         </Main>
     );

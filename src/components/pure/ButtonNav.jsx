@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 const Btn = styled.button`
     font-family: 'Aesthetic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: .5rem;
-    background-color: black;
+    background-color: transparent;
     border: none;
     border-radius: .5rem ;
     font-size: 1rem;
