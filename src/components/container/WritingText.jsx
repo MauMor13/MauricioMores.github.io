@@ -5,7 +5,7 @@ import { useEffect , useRef } from "react";
 const TextOne = styled.span`
     font-family: 'Courier New', Courier, monospace;
     display: block;
-    min-height: 10rem;
+    min-height:${props => props.height};
     font-size: 1.3rem;
     padding-top: 1rem;
     text-align: center;
@@ -52,12 +52,12 @@ const WritingText = (props) => {
         }
     }, [textWriting]);
     return (
-        <div>
-            <TextOne>
+        <>
+            <TextOne height={props.height}>
             <span ref={textRef}></span>
             <ToBlink>│</ToBlink>
             </TextOne>
-        </div>
+        </>
     );
 }
 WritingText.prototype = {

@@ -12,9 +12,12 @@ const Img = styled.div`
         transform: translate(-50%, -50%);
         content: '';
         width: 20rem;
-        height: 15rem;
+        height: 20rem;
         border-radius: .5rem;
         background-image: url(${props => props.imgOne});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     &:before{
         position: absolute;
@@ -23,9 +26,58 @@ const Img = styled.div`
         transform: translate(-50%, -30%);
         content: '';
         width: 20rem;
-        height: 15rem;
+        height: 20rem;
         border-radius: .5rem;
         background-image: url(${props => props.imgTwo});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: grayscale(100%);
+    }
+    &:hover{
+        &:after{
+        animation: movDiagonalAfter 1s forwards;
+        }
+        &:before{
+        animation: movDiagonalBefore 1s forwards;
+        }
+    }
+    @keyframes movDiagonalAfter {
+        0%{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        50%{
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -40%);
+        }
+        100%{
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -30%);
+            z-index: -1;
+            filter: grayscale(100%);
+        }
+    }
+    @keyframes movDiagonalBefore {
+        0%{
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -30%);
+        }
+        50%{
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -40%);
+        }
+        100%{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: none;
+        }
     }
 `;
 const ImgAbout = ({imgOne, imgTwo}) => {

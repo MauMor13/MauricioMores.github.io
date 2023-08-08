@@ -32,7 +32,7 @@ const Home = () => {
                 del desarrollo web y la programación en todo su esplendor.
                 ¡Los invito a explorar mi portafolio y a descubrir cómo juntos podemos
                 hacer realidad grandes ideas! No dudes en contactarme para futuras colaboraciones o cualquier
-                consulta que puedas tener.`}/>
+                consulta que puedas tener.`} height={'25rem'}/>
             </Article>
         </Main>
     );
