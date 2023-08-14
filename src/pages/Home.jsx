@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import WritingText from "../components/container/WritingText";
+import WritingText from "../components/container/WritingText.jsx";
+import CubeRotateAnimation from '../components/container/CubeRotateAnimation.jsx';
 
 const Main = styled.main`
     display: flex;
@@ -17,8 +18,11 @@ const Title = styled.h1`
 `;
 
 const Article = styled.article`
-    max-width: 40rem;
+    width: 50%;
     padding-bottom: 2rem;
+    @media (max-width:768px){
+        width: 100%;
+    } 
 `;
 
 const Home = () => {
@@ -33,6 +37,9 @@ const Home = () => {
                 ¡Los invito a explorar mi portafolio y a descubrir cómo juntos podemos
                 hacer realidad grandes ideas! No dudes en contactarme para futuras colaboraciones o cualquier
                 consulta que puedas tener.`} height={'25rem'}/>
+            </Article>
+            <Article>
+            <CubeRotateAnimation/>
             </Article>
         </Main>
     );

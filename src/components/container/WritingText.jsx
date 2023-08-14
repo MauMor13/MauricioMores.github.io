@@ -37,10 +37,10 @@ const WritingText = (props) => {
         let time = 50;
             writingChar();
         function writingChar() {
-            let timeMax = 150;
-            let timeMin = 50;
+            let timeMax = 60;
+            let timeMin = 30;
             if (textWriting.charAt(index) == " ") {
-                time = Math.random() * (timeMax - timeMin) + timeMin;
+                time = Math.floor(Math.random() * (timeMax - timeMin) + timeMin);
             } else {
                 time = 50;
             }

@@ -26,7 +26,7 @@ const AppLoading = () => {
 
   return (
     <BrowserRouter>
-    <div className="container_body">
+    <div className='container_body'>
       <Header />
         <Routes>
             <Route path="/" element={<Home />} />

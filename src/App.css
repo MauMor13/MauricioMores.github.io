@@ -1,5 +1,6 @@
 .container_body {
     min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.605);
 }
 
 Header {
@@ -19,7 +20,7 @@ Footer {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #3c3737;
+    background-color: rgb(91, 87, 87);
     border-radius: 1rem;
 }
 
