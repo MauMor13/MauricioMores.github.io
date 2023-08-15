@@ -34,15 +34,15 @@ const WritingText = (props) => {
     useEffect(() => {
         const element = textRef.current;
         let index = 0;
-        let time = 50;
+        let time = 40;
             writingChar();
         function writingChar() {
-            let timeMax = 60;
+            let timeMax = 40;
             let timeMin = 30;
             if (textWriting.charAt(index) == " ") {
                 time = Math.floor(Math.random() * (timeMax - timeMin) + timeMin);
             } else {
-                time = 50;
+                time = 40;
             }
             if (index < textWriting.length) {
                 element.innerHTML += textWriting.charAt(index);

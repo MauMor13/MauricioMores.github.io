@@ -11,9 +11,12 @@ text-decoration: none;
     color: white;
     font-family: 'Courier New', Courier, monospace;
     padding: 0 1rem 0 1rem;
+    border-bottom: 1px solid #7100F1;
+    border-radius:0 0 1rem 1rem;
     &:hover{
-        border-bottom: 1px solid #7100F1;
-        border-radius:0 0 1rem 1rem;
+        background-color: #7100F1;
+        border: 1px solid #7100F1;
+        border-radius:1rem;
     } 
 `;
 const Signature = styled.span `
@@ -25,7 +28,7 @@ const Signature = styled.span `
 const Footer = () => {
     return (
         <Footer_Body>
-        <Text href="https://www.linkedin.com/in/mauricio-mores-b3898817b/"> Desarrollador Full Stack Java {'= ( ) =>'}
+        <Text href="https://www.linkedin.com/in/mauricio-mores-b3898817b/"> Full Stack Java Developer {'= ( ) =>'}
         {'{'}<Signature>  Mauricio Mores </Signature>{'}'}</Text>
         </Footer_Body>
     );

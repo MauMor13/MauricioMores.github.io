@@ -58,18 +58,19 @@ const CubeRotateAnimation = () => {
 
         const animate = function () {
             controls.update();
-            cube.rotation.y += 0.004;
             renderer.render(scene, camera);
             requestAnimationFrame(animate);
         };
         
         const onWindowResize = function () {
-            camera.aspect = window.innerWidth / window.innerHeight;
+            const { clientWidth, clientHeight } = currentRef; // Obtén las dimensiones del contenedor
+            camera.aspect = clientWidth / clientHeight;
             camera.updateProjectionMatrix();
-            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.setSize(clientWidth, clientHeight);
         }
 
-        window.addEventListener( 'resize', onWindowResize, false );
+        window.addEventListener( 'resize', onWindowResize );
+        onWindowResize();
         animate();
 
         return () => {
