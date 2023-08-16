@@ -2,13 +2,12 @@ import PropTypes from 'prop-types';
 import { styled } from 'styled-components';
 
 const Btn = styled.button`
-font-family: 'Aesthetic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Aesthetic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: .5rem;
-    background-color: black;
+    background-color: transparent;
     border: none;
     border-radius: .5rem ;
     font-size: 1rem;
-    color: white;
     position: relative;
     overflow: hidden;
     transition: 1.5s all ;
@@ -33,7 +32,7 @@ font-family: 'Aesthetic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
         transform: rotate(-45deg);
     }
     &:hover {
-        color: #7100F1;
+        color: #8f30fd;
         border: none;
 
     &:after,&:before {
@@ -50,6 +49,6 @@ const ButtonNav = ({ text }) => {
     );
 }
 ButtonNav.prototype = {
-    propstext: PropTypes.string,
+    text : PropTypes.string,
 }
 export default ButtonNav;

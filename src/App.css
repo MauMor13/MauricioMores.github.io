@@ -1,0 +1,30 @@
+.container_body {
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.605);
+}
+
+Header {
+    min-height: 18vh;
+}
+
+Main {
+    min-height: 77vh;
+}
+
+Footer {
+    min-height: 5vh;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(91, 87, 87);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7100F1;
+    border-radius: 1rem;
+}

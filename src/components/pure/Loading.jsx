@@ -19,16 +19,16 @@ const Img = styled.div`
     
     @keyframes heartBeat {
         0% {
-            filter: opacity(100%);
+            filter: opacity(30%);
             transform: scale(1);
             box-shadow: inset;
         }
         50% {
-            filter: opacity(30%);
+            filter: opacity(100%);
             transform: scale(1.2);
         }
         100% {
-            filter: opacity(100%);
+            filter: opacity(30%);
             transform: scale(1);
         }
     }

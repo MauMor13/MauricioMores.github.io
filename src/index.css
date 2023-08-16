@@ -6,6 +6,18 @@
     font-family: 'Firesidedemo';
     src: url('./assets/font/Firesidedemo-0WB1d.otf') format('truetype');
 }
+@font-face {
+    font-family: 'Blouse';
+    src: url('src/assets/font/Blouse.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ElectroBox';
+    src: url('src/assets/font/eElectroBox.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Black_Ashpalt';
+    src: url('src/assets/font/Black_Ashpalt.ttf') format('truetype');
+}
 *{
     padding: 0;
     margin: 0;
@@ -13,5 +25,9 @@
     color: white;
 }
 body{
-    background-color: black;
+    background-image: url(src/assets/image/circuitBoard.jpg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
