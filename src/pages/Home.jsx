@@ -40,6 +40,19 @@ const AnimateMoveImage = styled.div`
     align-items: center;
     width: 15rem;
     height: 6rem;
+    animation: delayToBlink 3s infinite;
+
+    @keyframes delayToBlink {
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
 `;
 const Img = styled.img`
     width: 3rem;
