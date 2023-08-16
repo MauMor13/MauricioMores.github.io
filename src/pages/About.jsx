@@ -11,7 +11,12 @@ const Main = styled.main`
 `;
 const Title = styled.h2`
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+`;
+const TitlePrime = styled.h1 `
+    font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
     text-align: center;
 `;
 const Seccion = styled.section`
@@ -34,6 +39,14 @@ const Article = styled.article`
         width: 100%;
     } 
 `;
+const ArticlePrime = styled.article `
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+`;
 const Text = styled.p`
     font-family: 'Courier New', Courier, monospace;
     display: block; 
@@ -45,15 +58,12 @@ const Text = styled.p`
 const About = () => {
     return (
         <Main>
-            <Seccion>
-                <Article>
-                    <Title>Lo que podras saber de mi . . .</Title>
+                <ArticlePrime>
+                    <TitlePrime>Lo que podras saber de mi . . .</TitlePrime>
                     <Text>Un profesional dedicado a innovar y aprender nuevas tecnologias 
                     para desarrollar y poder resolver todo tipo de problematicas. Destaco por mi gran enfoque 
                     y trabajo en equipo, como tambien poder sobrellevar los desafios de forma autonoma.</Text>
-                </Article>
-                <ImgSwiper imgs='["src/assets/image/905857.jpg","src/assets/image/867357.jpg"]'></ImgSwiper>
-            </Seccion>
+                </ArticlePrime>
             <Seccion>
                 <Article>
                     <Title>Mi Experiencia Laboral . . .</Title>

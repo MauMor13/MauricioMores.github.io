@@ -8,7 +8,7 @@ const TextOne = styled.span`
     min-height:${props => props.height};
     font-size: 1.3rem;
     padding-top: 1rem;
-    text-align: center;
+    text-align: left;
 `;
 const ToBlink = styled.div`
     display: inline-block;
