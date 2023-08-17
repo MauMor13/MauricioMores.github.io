@@ -34,12 +34,12 @@ const WritingText = (props) => {
     useEffect(() => {
         const element = textRef.current;
         let index = 0;
-        let time = 40;
+        let time = 30;
             writingChar();
         function writingChar() {
-            let timeMax = 40;
-            let timeMin = 30;
-            if (textWriting.charAt(index) == " ") {
+            let timeMax = 30;
+            let timeMin = 20;
+            if (textWriting.charAt(index) === " ") {
                 time = Math.floor(Math.random() * (timeMax - timeMin) + timeMin);
             } else {
                 time = 40;
@@ -60,8 +60,9 @@ const WritingText = (props) => {
         </>
     );
 }
-WritingText.prototype = {
-    text : PropTypes.string,
-}
+WritingText.propTypes = {
+    text: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired
+};
 
 export default WritingText;
