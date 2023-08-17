@@ -18,8 +18,8 @@ const ImgCarousel = styled(SwiperSlide)`
 
 const ImgSwiper = (props) => {
     const { imgs } = props;
-
     const imageArray = JSON.parse(imgs); 
+    console.log(imageArray);
     return (
         <CustomSwiper
             pagination={{

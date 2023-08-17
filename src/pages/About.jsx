@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import ImgSwiper from "../components/pure/ImgSwiper";
+import ImgSwiper from "../components/container/ImgSwiper";
 
 const Main = styled.main`
     display: flex;
