@@ -6,7 +6,7 @@ import { Pagination } from 'swiper/modules';
 import { styled } from 'styled-components';
 
 const CustomSwiper = styled(Swiper)`
-    padding-top: 1.5rem;
+margin-top: 1.5rem;
     width: max(30rem,15rem);
     height: max(20rem,15rem);
     border-radius: 1rem;
