@@ -7,15 +7,15 @@ const Footer_Body = styled.footer `
     margin: 0 2rem 0 2rem;
 `;
 const Text = styled.a `
-text-decoration: none;
+    text-decoration: none;
     color: white;
     font-family: 'Courier New', Courier, monospace;
     padding: 0 1rem 0 1rem;
-    border-bottom: 1px solid #7100F1;
+    border-bottom: 2px solid #7100F1;
     border-radius:0 0 1rem 1rem;
     &:hover{
-        background-color: #7100F1;
-        border: 1px solid #7100F1;
+        background-color: #0000008c;
+        border-bottom: 4px solid #7100F1;
         border-radius:1rem;
     } 
 `;

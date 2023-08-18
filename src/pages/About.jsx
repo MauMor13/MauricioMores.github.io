@@ -56,6 +56,9 @@ const Text = styled.p`
 `;
 
 const About = () => {
+    const imgOfExperience = ["src/assets/image/imgHDFull/parado-en-el-borde-de-dos-mundos_3840x2160_xtrafondos.com.jpg","src/assets/image/imgHDFull/gato-con-mariposa-de-fantasia_3840x2160_xtrafondos.com.jpg"];
+    const imgOfHobbies = ["src/assets/image/imgHDFull/gato-con-estrellas-de-fondo_3840x2160_xtrafondos.com.jpg","src/assets/image/imgHDFull/gato-con-lentes-de-galaxia_4928x3264_xtrafondos.com.jpg"];
+
     return (
         <Main>
                 <ArticlePrime>
@@ -72,15 +75,15 @@ const About = () => {
                     de electrovalvulas para la industria agropecuaria, el reacondicionamiento y mantenimiento de circuitos electricos industriales como tambien proyectos 
                     de educacion en robotica, electronica y programacion basandome en placas arduino.</Text>
                 </Article>
-                <ImgSwiper imgs='["src/assets/image/905857.jpg","src/assets/image/867357.jpg"]'></ImgSwiper>
+                <ImgSwiper imgs={imgOfExperience}></ImgSwiper>
             </Seccion>
             <Seccion>
                 <Article>
                     <Title>Mis Hobbies son . . .</Title>
                     <Text>Cuento con multiples pasa tiempos, como la creacion y programacion de placas de desarrollo en Arduino, la impesion en 3D, 
                     la lectura, la musica, hacer ejercicio, reparar todo tipo de aparatos tanto mecanicos como electricos y salir a pasear en moto.</Text>
-                    <ImgSwiper imgs='["src/assets/image/905857.jpg","src/assets/image/867357.jpg"]'></ImgSwiper>
                 </Article>
+                <ImgSwiper imgs={imgOfHobbies}></ImgSwiper>
             </Seccion>
         </Main>
     );

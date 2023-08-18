@@ -1,12 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import PropTypes from 'prop-types';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { styled } from 'styled-components';
 
 const CustomSwiper = styled(Swiper)`
-    max-width: 25rem;
-    max-height: 20rem;
+    padding-top: 1.5rem;
+    width: max(30rem,15rem);
+    height: max(20rem,15rem);
     border-radius: 1rem;
 `;
 const ImgCarousel = styled(SwiperSlide)`
@@ -18,8 +20,6 @@ const ImgCarousel = styled(SwiperSlide)`
 
 const ImgSwiper = (props) => {
     const { imgs } = props;
-    const imageArray = JSON.parse(imgs); 
-    console.log(imageArray);
     return (
         <CustomSwiper
             pagination={{
@@ -28,11 +28,14 @@ const ImgSwiper = (props) => {
             modules={[Pagination]}
             className="mySwiper"
         >
-            {imageArray.map((img, index) => (
+            {imgs.map((img, index) => (
                 <ImgCarousel key={index} img={img}></ImgCarousel>
             ))}
         </CustomSwiper>
     );
-}
+};
+ImgSwiper.propTypes = {
+    imgs: PropTypes.arrayOf(PropTypes.string).isRequired
+};
 
 export default ImgSwiper;
