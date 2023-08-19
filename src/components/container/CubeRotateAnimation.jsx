@@ -23,7 +23,7 @@ const CubeRotateAnimation = () => {
         camera.position.z = 0;
         camera.position.x = 0;
 
-        const renderer = new THREE.WebGLRenderer({ alpha: true }); // Habilitamos fondo transparente
+        const renderer = new THREE.WebGLRenderer({ alpha: true }); 
         renderer.setSize(width, height);
         currentRef.appendChild(renderer.domElement);
 
@@ -63,7 +63,7 @@ const CubeRotateAnimation = () => {
         };
         
         const onWindowResize = function () {
-            const { clientWidth, clientHeight } = currentRef; // Obtén las dimensiones del contenedor
+            const { clientWidth, clientHeight } = currentRef;
             camera.aspect = clientWidth / clientHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(clientWidth, clientHeight);
