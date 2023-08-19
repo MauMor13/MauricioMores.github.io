@@ -27,6 +27,9 @@ const Seccion = styled.section`
     margin-bottom: 1.5rem;
     width: 100%;
     min-height: 10rem;
+    @media (max-width:1150px){
+        justify-content: center;
+    } 
 `;
 const Article = styled.article`
     display: flex;
@@ -35,7 +38,7 @@ const Article = styled.article`
     align-items: center;
     width: 50%;
     min-height: 100%;
-    @media (max-width:768px){
+    @media (max-width:1150px){
         width: 100%;
     } 
 `;
@@ -56,8 +59,8 @@ const Text = styled.p`
 `;
 
 const About = () => {
-    const imgOfExperience = ["src/assets/image/imgHDFull/parado-en-el-borde-de-dos-mundos_3840x2160_xtrafondos.com.jpg","src/assets/image/imgHDFull/gato-con-mariposa-de-fantasia_3840x2160_xtrafondos.com.jpg"];
-    const imgOfHobbies = ["src/assets/image/imgHDFull/gato-con-estrellas-de-fondo_3840x2160_xtrafondos.com.jpg","src/assets/image/imgHDFull/gato-con-lentes-de-galaxia_4928x3264_xtrafondos.com.jpg"];
+    const imgOfExperience = ["src/assets/image/imgCircuitBoard/24305-Circuit-4k-Ultra-HD-Wallpaper.jpg","src/assets/image/imgHDFull/parado-en-el-borde-de-dos-mundos_3840x2160_xtrafondos.com.jpg","src/assets/image/imgHDFull/gato-con-mariposa-de-fantasia_3840x2160_xtrafondos.com.jpg"];
+    const imgOfHobbies = ["src/assets/image/imgCircuitBoard/pexels-miguel-á-padriñán-3520692.jpg","src/assets/image/imgHDFull/gato-con-estrellas-de-fondo_3840x2160_xtrafondos.com.jpg","src/assets/image/imgHDFull/gato-con-lentes-de-galaxia_4928x3264_xtrafondos.com.jpg"];
 
     return (
         <Main>

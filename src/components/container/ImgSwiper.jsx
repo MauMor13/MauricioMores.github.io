@@ -1,15 +1,15 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { styled } from 'styled-components';
 import PropTypes from 'prop-types';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-import { styled } from 'styled-components';
+import 'swiper/css/effect-cards';
+import { EffectCards } from 'swiper/modules';
+
 
 const CustomSwiper = styled(Swiper)`
-margin-top: 1.5rem;
-    width: max(30rem,15rem);
+    width: max(30rem,20rem);
     height: max(20rem,15rem);
-    border-radius: 1rem;
+    padding: 1rem;
 `;
 const ImgCarousel = styled(SwiperSlide)`
     background-image: url(${props => props.img});
@@ -22,11 +22,10 @@ const ImgSwiper = (props) => {
     const { imgs } = props;
     return (
         <CustomSwiper
-            pagination={{
-                dynamicBullets: true,
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
+            effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
         >
             {imgs.map((img, index) => (
                 <ImgCarousel key={index} img={img}></ImgCarousel>
