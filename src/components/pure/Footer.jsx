@@ -14,7 +14,7 @@ const Text = styled.a `
     border-bottom: 2px solid #7100F1;
     border-radius:0 0 1rem 1rem;
     &:hover{
-        background-color: #0000008c;
+        background-color: black;
         border-bottom: 4px solid #7100F1;
         border-radius:1rem;
     } 
