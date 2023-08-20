@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import CarouselTechnologies from "../components/container/CarouselTechnologies";
 
 const Main = styled.main`
     display: flex;
@@ -44,6 +45,7 @@ const Technologies = () => {
                 ágiles utilizando herramientas como Trello y Jira, lo que me ha permitido desempeñarme eficazmente en equipos de trabajo. Estas capacidades 
                 combinadas me han permitido abordar proyectos desde diferentes perspectivas técnicas y colaborativas. </Text>
             </ArticlePrime>
+            <CarouselTechnologies/>
         </Main>
     );
 }
