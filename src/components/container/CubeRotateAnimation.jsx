@@ -67,6 +67,9 @@ const CubeRotateAnimation = () => {
             camera.aspect = clientWidth / clientHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(clientWidth, clientHeight);
+
+            const newCubeScale = clientWidth < 620 ? 0.8 : 1; 
+            cube.scale.set(newCubeScale, newCubeScale, newCubeScale);
         }
 
         window.addEventListener( 'resize', onWindowResize );
