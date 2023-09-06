@@ -1,7 +1,8 @@
-import ButtonNav from './ButtonNav';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Outlet, Link } from "react-router-dom";
 import styled from 'styled-components';
+import ButtonNav from './ButtonNav';
+import NavBarRight from './NavBarRight'
 
 const NavBar = styled.header`
     display: flex;
@@ -69,7 +70,10 @@ const NavMenu = styled.div`
 `;
 
 const Header = () => {
+    
     const [screenSize, setScreenSize] = useState(window.innerWidth);
+    const [isNavBarRightVisible, setIsNavBarRightVisible] = useState(false);
+
     useEffect(() => {
         const handleResize = () => {
             setScreenSize(window.innerWidth);
@@ -80,10 +84,14 @@ const Header = () => {
         };
     }, []);
     
+    const handleNavMenuClick = () => {
+        setIsNavBarRightVisible(!isNavBarRightVisible);
+    };
+
     return (
         <NavBar>
             <Img/>
-            {screenSize < 700 ? <NavMenu>
+            {screenSize < 700 ? <NavMenu onClick={handleNavMenuClick}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -95,6 +103,7 @@ const Header = () => {
                     <Link to="/Projects"><ButtonNav text="Projects" /></Link>
                     <Link to="/Contact"><ButtonNav text="Contact" /></Link>
                 </Nav>}
+                {isNavBarRightVisible && screenSize < 700 && <NavBarRight closeNavBar={handleNavMenuClick}/>}
             <Outlet />
         </NavBar>
     );
