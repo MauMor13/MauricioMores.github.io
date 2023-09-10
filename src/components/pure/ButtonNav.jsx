@@ -41,14 +41,14 @@ const Btn = styled.button`
     }
     `;
 
-const ButtonNav = ({ text }) => {
+const ButtonNav = (props) => {
     return (
         <Btn>
-            {text}
+            {props.text}
         </Btn>
     );
 }
-ButtonNav.prototype = {
-    text : PropTypes.string,
+ButtonNav.propTypes = {
+    text: PropTypes.string.isRequired
 }
 export default ButtonNav;

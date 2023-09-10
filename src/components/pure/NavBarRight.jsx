@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import ButtonNav from './ButtonNav';
 
 const NavBar = styled.nav`
@@ -97,6 +98,9 @@ const NavBarRight = (props) => {
             <Link to="/Contact"><ButtonNav text="Contact" /></Link>
         </NavBar>
     );
+}
+NavBarRight.propTypes = {
+    closeNavBar: PropTypes.func.isRequired
 }
 
 export default NavBarRight;

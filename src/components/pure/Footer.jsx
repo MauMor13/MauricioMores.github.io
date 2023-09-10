@@ -1,6 +1,9 @@
 import { styled } from "styled-components";
+import ModalFooter from "./ModalFooter";
+import { useState } from "react";
 
 const Footer_Body = styled.footer `
+    cursor: default;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,10 +29,17 @@ const Signature = styled.span `
 `;
 
 const Footer = () => {
+    const [isModalFooterVisible, setIsModalFooterVisible] = useState(false);
+    
+    const handleModalFooterClick = () => {
+        setIsModalFooterVisible(!isModalFooterVisible);
+    };
+
     return (
         <Footer_Body>
-        <Text href="https://www.linkedin.com/in/mauricio-mores-b3898817b/"> Full Stack Java Developer {'= ( ) =>'}
-        {'{'}<Signature>  Mauricio Mores </Signature>{'}'}</Text>
+            {isModalFooterVisible && <ModalFooter closeModal={handleModalFooterClick} modalFooterVisible={isModalFooterVisible}/>}
+            <Text onClick={handleModalFooterClick}> Full Stack Java Developer {'= ( ) =>'}
+            {'{'}<Signature>  Mauricio Mores </Signature>{'}'}</Text>
         </Footer_Body>
     );
 }
