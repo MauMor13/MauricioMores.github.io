@@ -22,31 +22,32 @@ const Modal = styled.div`
     contain: content;
     border: 2px solid black;
     border-radius: 1.5rem;
-    animation: appearsBelow 1s forwards;
+    position: relative;
+    height: 20rem;
+    width: 30rem;
+    animation: appearsBelow .5s;
+    animation-timing-function: linear;
 
     @keyframes appearsBelow {
-        from {
-        position: absolute;
-        height: 5rem;
-        width: 5rem;
-        bottom: 0;
-        right: 50%;
-        transform: translate(0%,50%);
+    0%{
+        transform: scale(.2);
         opacity: 0;
     }
+    50%{
+        transform: scale(.7);
+        opacity: 0.5;
+    }
 
-    to {
-        height: 20rem;
-        width: 30rem;
-        position: relative;
+    100% {
+        transform: scale(1);
         opacity: 1;
     }
     }
 `;
 const CloseModal = styled.div`
     position: absolute;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     margin: 1rem;
     top: 0;
     right: 0;
@@ -77,7 +78,7 @@ const CloseModal = styled.div`
         position: absolute;
         background-color: white;
         width: 100%;
-        height: 7px;
+        height: 5px;
         border-radius: 1rem;
         transform: rotate(45deg);
         display: block;
