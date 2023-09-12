@@ -22,7 +22,17 @@ const Article = styled.article`
     position: relative;
     width: 50%;
     padding-bottom: 2rem;
-    @media (max-width:900px){
+    @media (max-width:950px){
+        width: 100%;
+    } 
+`;
+const ArticleTwo = styled.article`
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width:950px){
         width: 100%;
     } 
 `;
@@ -70,7 +80,7 @@ const Home = () => {
         if (screenWidth < 600 && screenWidth > 400)
             setWritingTextHeight("15rem");
         if (screenWidth < 400)
-            setWritingTextHeight("25rem");
+            setWritingTextHeight("20rem");
     };
 
     useEffect(() => {
@@ -92,10 +102,10 @@ const Home = () => {
                 bring great ideas to life! Do not hesitate to contact me for future collaborations or any
                 query you may have.`} height={writingTextHeight} />
             </Article>
-            <Article>
+            <ArticleTwo>
                 <AnimateMoveImage><Img src="src/assets/image/arrow-prev-svgrepo-com.svg" /> SHIFT <Img src="src/assets/image/arrow-next-svgrepo-com.svg" /></AnimateMoveImage>
                 <CubeRotateAnimation />
-            </Article>
+            </ArticleTwo>
         </Main>
 
     );
