@@ -21,7 +21,6 @@ const Title = styled.h1`
 const Article = styled.article`
     position: relative;
     width: 50%;
-    padding-bottom: 2rem;
     @media (max-width:950px){
         width: 100%;
     } 
@@ -71,16 +70,16 @@ const Img = styled.img`
 
 const Home = () => {
 
-    const [writingTextHeight, setWritingTextHeight] = useState("20rem");
+    const [writingTextHeight, setWritingTextHeight] = useState("19rem");
 
     const updateWritingTextHeight = () => {
         const screenWidth = window.innerWidth;
         if (screenWidth < 930)
-            setWritingTextHeight("15rem");
+            setWritingTextHeight("10rem");
         if (screenWidth < 600 && screenWidth > 400)
-            setWritingTextHeight("15rem");
+            setWritingTextHeight("14rem");
         if (screenWidth < 400)
-            setWritingTextHeight("20rem");
+            setWritingTextHeight("18rem");
     };
 
     useEffect(() => {
