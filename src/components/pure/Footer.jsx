@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const Footer_Body = styled.footer`
     cursor: default;
+    padding-bottom: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,15 +12,16 @@ const Footer_Body = styled.footer`
 `;
 const Text = styled.button`
     text-decoration: none;
-    background-color: black;
+    background-color: #000000a7;
+    padding: .5rem;
     color: white;
     cursor: pointer;
     border: none;
     border-radius: 12px;
     font-family: 'Courier New', Courier, monospace;
-    padding: .5rem;
     position: relative;
-    ::before{
+
+    &::before {
         content: "";
         position: absolute;
         top: 0;
@@ -28,26 +30,25 @@ const Text = styled.button`
         width: 100%;
         height: 100%;
         background: linear-gradient(
-            45deg, #7100F1, #00000075,
+            45deg, #d500f1, #6000f1, #7100F1, #6000f1, #d500f1, #7100F1
         );
         background-size: 800%;
         border-radius: 10px;
-        animation: glowing 10s linear infinite;
-        @keyframes glowing {
-            0%{
-                background-position: 0 0;
-            }
-            50%{
-                background-position: 400% 0;
-            }
-            100%{
-                background-position: 0 0;
-            }
+        filter: blur(8px);
+        animation: glowing 100s linear infinite;
+    }
+
+    @keyframes glowing {
+        0% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 400% 0;
+        }
+        100% {
+            background-position: 0 0;
         }
     }
-    &:hover{
-        
-    } 
 `;
 const Signature = styled.span`
     font-size: 1.3rem;
