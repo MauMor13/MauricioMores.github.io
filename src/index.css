@@ -2,33 +2,39 @@
     font-family: 'Aesthetic';
     src: url('./assets/font/Aesthetic.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Firesidedemo';
     src: url('./assets/font/Firesidedemo-0WB1d.otf') format('truetype');
 }
+
 @font-face {
     font-family: 'Blouse';
     src: url('src/assets/font/Blouse.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'ElectroBox';
     src: url('src/assets/font/eElectroBox.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Black_Ashpalt';
     src: url('src/assets/font/Black_Ashpalt.ttf') format('truetype');
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: white;
 }
-body{
+
+body {
     background-image: url(src/assets/image/imgCircuitBoard/24305-Circuit-4k-Ultra-HD-Wallpaper.jpg);
     background-position: left;
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     overflow-x: hidden;
 }
-
