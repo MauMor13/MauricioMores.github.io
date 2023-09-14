@@ -35,7 +35,7 @@ const NavBar = styled.nav`
         opacity: 1;
     }
 }`;
-const ButtonNavClose = styled.div `
+const ButtonNavClose = styled.div`
     position: absolute;
     width: 3rem;
     height: 3rem;
@@ -68,8 +68,8 @@ const ButtonNavClose = styled.div `
     span {
         position: absolute;
         background-color: white;
-        width: 100%;
-        height: 7px;
+        width: 80%;
+        height: 5px;
         border-radius: 1rem;
         transform: rotate(45deg);
         display: block;
@@ -81,13 +81,13 @@ const ButtonNavClose = styled.div `
 `;
 
 const NavBarRight = (props) => {
-    const handleButtonClick = () =>{
+    const handleButtonClick = () => {
         props.closeNavBar();
     };
 
     return (
         <NavBar>
-            <ButtonNavClose  onClick={handleButtonClick}>
+            <ButtonNavClose onClick={handleButtonClick}>
                 <span></span>
                 <span></span>
             </ButtonNavClose>

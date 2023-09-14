@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { styled } from 'styled-components';
-import ButtonDownload from '../container/ButtonDownload.jsx'
+import ButtonDownload from '../container/ButtonDownload.jsx';
 
 const Overlay = styled.div`
     position: fixed;
