@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { styled } from 'styled-components';
 import ButtonDownload from '../container/ButtonDownload.jsx';
+import Networks from './Networks.jsx'
 
 const Overlay = styled.div`
     position: fixed;
@@ -22,7 +23,8 @@ const Modal = styled.div`
     background: rgba(0, 0, 0, 0.5); 
     contain: content;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     border: 2px solid black;
     border-radius: 1.5rem;
@@ -92,6 +94,9 @@ const CloseModal = styled.div`
         transform: rotate(-45deg);
     }
 `;
+const Title = styled.h1`
+    font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+`;
 
 const ModalFooter = (props) => {
     return (
@@ -101,6 +106,8 @@ const ModalFooter = (props) => {
                     <span></span>
                     <span></span>
                 </CloseModal>
+                <Title>Contact Me</Title>
+                <Networks />
                 <ButtonDownload />
             </Modal>
         </Overlay>
