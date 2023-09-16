@@ -15,6 +15,12 @@ const ImageNetworks = styled.a`
     height: 60%;
     background-size: contain;
     background-repeat: no-repeat;
+    transition: transform 0.3s;;
+    
+    &:hover{
+        transform: scale(1.3);
+    }
+    
 `;
 
 
