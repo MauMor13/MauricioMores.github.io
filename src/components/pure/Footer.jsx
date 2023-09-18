@@ -35,7 +35,7 @@ const Text = styled.button`
         background-size: 800%;
         border-radius: 10px;
         filter: blur(8px);
-        animation: glowing 100s linear infinite;
+        animation: glowing 20s linear infinite;
     }
 
     @keyframes glowing {
