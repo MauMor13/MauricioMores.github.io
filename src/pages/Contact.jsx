@@ -155,6 +155,7 @@ const Redes = styled.div`
 `;
 
 const Contact = () => {
+
     return (
         <Main>
             <SectionPrime>
@@ -168,15 +169,19 @@ const Contact = () => {
                 </Text>
             </SectionPrime>
             <SectionSecond>
-                <Form action="https://mauri.f.mores@email.com" method="POST">
-                    <Label> Your Name :
-                        <Input type="text" placeholder="Your Name" required />
+                <Form action="https://formsubmit.co/e7cff579b0fcb4d8b52d651ce2538169" method='POST' >
+                    <input type="hidden" name="_captcha" value="false"></input>
+                    <Label> Your Full Name :
+                        <Input type="text" name="name" placeholder="Full Name" required />
                     </Label>
                     <Label>Your Email Contact :
-                        <Input type="email" placeholder="Your Email" required />
+                        <Input type="email" name="email" placeholder="Your Email" autoComplete="off" required />
+                    </Label>
+                    <Label>Email subject:
+                        <Input type="text" name="subject" placeholder="Subject" autoComplete="off" required />
                     </Label>
                     <Label>Your Menssage :
-                        <TextArea placeholder="Your Message" rows="4" required />
+                        <TextArea name="menssage" placeholder="Your Message" rows="4" required />
                     </Label>
                     <SubmitButton type="submit">
                         Send Message
