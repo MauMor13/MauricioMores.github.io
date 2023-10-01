@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Networks from "../components/pure/Networks";
+import { useState } from "react";
 
 const Main = styled.main`
     display: flex;
@@ -156,6 +157,44 @@ const Redes = styled.div`
 
 const Contact = () => {
 
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        _subject: '',
+        menssage: '',
+    });
+
+    const [responseMessage, setResponseMessage] = useState('');
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
+    const submitForm = async () => {
+        try {
+            const response = await fetch('https://formsubmit.co/e7cff579b0fcb4d8b52d651ce2538169', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setResponseMessage('Formulario enviado con éxito.');
+            } else {
+                setResponseMessage('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
+            }
+        } catch (error) {
+            console.error('Error al enviar el formulario:', error);
+            setResponseMessage('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
+        }
+    };
+
     return (
         <Main>
             <SectionPrime>
@@ -169,23 +208,24 @@ const Contact = () => {
                 </Text>
             </SectionPrime>
             <SectionSecond>
-                <Form action="https://formsubmit.co/e7cff579b0fcb4d8b52d651ce2538169" method='POST' >
+                <Form>
                     <input type="hidden" name="_captcha" value="false"></input>
                     <Label> Your Full Name :
-                        <Input type="text" name="name" placeholder="Full Name" required />
+                        <Input type="text" name="name" placeholder="Full Name" required onChange={handleChange} />
                     </Label>
                     <Label>Your Email Contact :
-                        <Input type="email" name="email" placeholder="Your Email" autoComplete="off" required />
+                        <Input type="email" name="email" placeholder="Your Email" autoComplete="off" required onChange={handleChange} />
                     </Label>
                     <Label>Email subject:
-                        <Input type="text" name="subject" placeholder="Subject" autoComplete="off" required />
+                        <Input type="text" name="_subject" placeholder="Subject" autoComplete="off" required onChange={handleChange} />
                     </Label>
                     <Label>Your Menssage :
-                        <TextArea name="menssage" placeholder="Your Message" rows="4" required />
+                        <TextArea name="menssage" placeholder="Your Message" rows="4" required onChange={handleChange} />
                     </Label>
-                    <SubmitButton type="submit">
+                    <SubmitButton onClick={submitForm}>
                         Send Message
                     </SubmitButton>
+                    <p>{responseMessage}</p>
                 </Form>
                 <Redes>
                     <TitleTwo>Networks :</TitleTwo>
