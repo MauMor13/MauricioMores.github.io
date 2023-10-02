@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Networks from "../components/pure/Networks";
+import ButtonDownload from '../components/container/ButtonDownload.jsx';
 import { useState } from "react";
 
 const Main = styled.main`
@@ -47,17 +48,17 @@ const Form = styled.form`
     backdrop-filter: blur(10px);
     border: 1px solid black;
     border-radius: 1rem;
-    min-height: 25rem;
+    min-height: 30rem;
     padding: 1rem;
     contain: content;
     display: flex;
-    margin-bottom: 1rem;
     color: #340;
     flex-direction: column;
     justify-content: space-around;
     width: 45%;
     @media (max-width:950px){
         width: 100%;
+        margin-bottom: 1rem;
     } 
 `;
 
@@ -130,22 +131,24 @@ const SubmitButton = styled.button`
         }
     }
 `;
+
 const Label = styled.label`
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100%;
 `;
+
 const TitleTwo = styled.h2`
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;
+
 const Redes = styled.div`
     backdrop-filter: blur(10px);
     border: 1px solid black;
     border-radius: 1rem;
-    min-height: 25rem;
+    min-height: 30rem;
     padding: 1rem;
     contain: content;
     display: flex;
-    color: #340;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -230,6 +233,7 @@ const Contact = () => {
                 <Redes>
                     <TitleTwo>Networks :</TitleTwo>
                     <Networks />
+                    <ButtonDownload />
                 </Redes>
             </SectionSecond>
         </Main>

@@ -29,7 +29,7 @@ const Modal = styled.div`
     border: 2px solid black;
     border-radius: 1.5rem;
     position: relative;
-    height: 20rem;
+    height: 30rem;
     width: 30rem;
     animation: appearsBelow .5s;
     animation-timing-function: linear;
