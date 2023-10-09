@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import CarouselTechnologies from "../components/container/CarouselTechnologies";
+//import CarouselTechnologies from "../components/container/CarouselTechnologies";
 import CarouselSphere from "../components/container/CarouselSphere";
 
 const Main = styled.main`
