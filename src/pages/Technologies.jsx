@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
-//import CarouselTechnologies from "../components/container/CarouselTechnologies";
-import CarouselSphere from "../components/container/CarouselSphere";
+import CarouselTechnologies from "../components/container/CarouselTechnologies";
 
 const Main = styled.main`
     display: flex;
@@ -45,8 +44,7 @@ const Technologies = () => {
                 SQL and PostgreSQL. In addition, I have collaborative work experience 
                 using agile methodologies and tools like Trello and Jira.</Text>
             </ArticlePrime>
-            {/*<CarouselTechnologies />*/}
-            <CarouselSphere />
+            <CarouselTechnologies />
         </Main>
     );
 }
