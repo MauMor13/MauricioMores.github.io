@@ -21,7 +21,7 @@ const ArticlePrime = styled.article`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     width: 100%;
 `;
 const TitlePrime = styled.h1`

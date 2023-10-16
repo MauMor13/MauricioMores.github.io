@@ -57,7 +57,7 @@ const Networks = () => {
             <LinkRedes href="https://www.linkedin.com/in/mauricio-mores-b3898817b/" >Linkedin: Mauricio Mores</LinkRedes>
         </Container>
         <Container>
-            <ImageNetworks img='src/assets/image/iconTechnologies/iconGithub.svg' ></ImageNetworks>
+            <ImageNetworks img='src/assets/image/iconTechnologies/github.svg' ></ImageNetworks>
             <LinkRedes href="https://github.com/MauMor13">Git Hub: Mauricio Mores</LinkRedes>
         </Container>
         <Container>
