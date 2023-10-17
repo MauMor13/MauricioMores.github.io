@@ -14,8 +14,13 @@ const Main = styled.main`
 
 const Title = styled.h1`
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 2.5rem;
+    text-align: left;
+`;
+
+const NameSpan = styled.span`
+    color: #7100F1;
+    text-shadow: 2px 4px 4px #bb0b0b8a;
 `;
 
 const Article = styled.article`
@@ -92,7 +97,7 @@ const Home = () => {
     return (
         <Main>
             <Article>
-                <Title>Discover my portfolio and immerse yourself in a unique journey of talent and passion.</Title>
+                <Title>HI,<br/> I´m <NameSpan>Mauricio</NameSpan>, <br/>Full Stack Developer . . .</Title>
                 <WritingText text={`In this space, I present a tour of my achievements,
                 outstanding skills and projects. Each item has been carefully
                 selected to reflect my dedication, experience and unique vision in the field
