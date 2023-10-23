@@ -1,32 +1,52 @@
 import styled from 'styled-components';
-import { useEffect } from 'react';
 
-const Container = styled.div`
+const ContainerCarousel = styled.div`
+	width: 100%;
+    height: 22rem;
+    margin-bottom: 2rem;
+	perspective: 1000px;
+	position: relative;
     display: flex;
-    align-items: center;
-    transform: rotateX(-4deg);
-    transform-style: preserve-3d;
-    position: relative;
-    width: 100%;
-    height: 24rem;
-    transform-origin: 50% 50% -500px;
+    justify-content: center;
 `;
+const Carousel = styled.div`
+    width: 10%;
+	position: absolute;
+    top: 26%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    animation: rotateIcon 30s infinite linear;
+	transform-style: preserve-3d;
 
-const Icon = styled.img`
-    width: 10rem;
-    height: 10rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    left: 42%;
-    transform-origin: 80% 50% -600px;
+    @keyframes rotateIcon {
+	0% {
+		transform: rotateY(0deg);
+	} 
+    100% {
+		transform: rotateY(360deg);
+	}
+}
+`;
+const ContentIcon = styled.div`
+    width: 9rem;
+	height: 9rem;
+    display: flex;
+    justify-content: center;
+	border: 1px solid #3b444b;
+	position: absolute;
     border-radius: 100px;
     background: linear-gradient(155deg, #4b1652,#4f175675 );
     box-shadow:  10px 10px 40px  #5e1c6779 ,
             -10px -10px 70px #651e6e;
 `;
+const Icon = styled.img`
+    width: 5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+`;
 const CarouselTechnologies = () => {
+
     const iconTechnologies = [
         'src/assets/image/iconTechnologies/css.svg',
         'src/assets/image/iconTechnologies/git.svg',
@@ -44,21 +64,19 @@ const CarouselTechnologies = () => {
         'src/assets/image/iconTechnologies/trello.svg',
         'src/assets/image/iconTechnologies/vue.svg'
     ];
-    useEffect(() => {
-        
-        return () => {
-            
-        };
-    }, []);
+
     return (
-        <Container>
-            {iconTechnologies.map((icon, index) => {
-                let angle = index * (360 / iconTechnologies.length);
-                return <Icon key={index} src={icon} angle={angle} style={{ transform: "rotateY(" + angle + "deg)" }}></Icon>
-            })}
-        </Container>
+        <ContainerCarousel>
+            <Carousel>
+                {iconTechnologies.map((icon, index) => {
+                    const angle = (360 / iconTechnologies.length) * index;
+                    return <ContentIcon key={index} style={{ transform: "rotateY(" + angle + "deg)  translateZ(25rem)" }}><Icon key={index} src={icon} ></Icon></ContentIcon>
+                })}
+            </Carousel>
+        </ContainerCarousel>
     );
 };
 
 export default CarouselTechnologies;
+
 
