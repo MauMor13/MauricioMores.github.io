@@ -9,7 +9,7 @@ const Main = styled.main`
     align-items: center;
 `;
 
-const ArticlePrime = styled.article`
+const InitText = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -32,28 +32,60 @@ const Text = styled.p`
     text-align: center;
 `;
 
-const Section = styled.section`
-    background-color: lightblue;
+const ContainCards = styled.section`
     width: 100%;
-    height: 15rem;
-    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    vertical-align: center;
 `;
 
+const Card = styled.article`
+    border-radius: 1rem;
+    width: 36rem;
+    height: 20rem;
+    margin: 1rem;
+    background-color: red;
+`;
+
+const TextCard = styled.p `
+    font-family: 'Courier New', Courier, monospace;
+    display: block; 
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    text-align: center;
+`;
 const Projects = () => {
     return (
         <Main>
-        <ArticlePrime>
-            <TitlePrime>My Projects . . .</TitlePrime>
-            <Text>Explore a showcase of my diverse range of projects, each 
-            representing a unique journey in the world of technology and 
-            creativity.</Text>
-        </ArticlePrime>
-        <Section>
+            <InitText>
+                <TitlePrime>My Projects . . .</TitlePrime>
+                <Text>Explore a showcase of my diverse range of projects, each
+                    representing a unique journey in the world of technology and
+                    creativity.</Text>
+            </InitText>
+            <ContainCards>
+                <Card>
+                    <TextCard>
+                    
+                    </TextCard>
+                </Card>
+                <Card>
+                    <TextCard>
 
-        </Section>
-        <Section>
+                    </TextCard>
+                </Card>
+                <Card>
+                    <TextCard>
 
-        </Section>
+                    </TextCard>
+                </Card>
+                <Card>
+                    <TextCard>
+
+                    </TextCard>
+                </Card>
+            </ContainCards>
         </Main>
     );
 }

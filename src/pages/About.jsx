@@ -65,10 +65,10 @@ const About = () => {
     return (
         <Main>
             <ArticlePrime>
-                <TitlePrime>Lo que podras saber de mi . . .</TitlePrime>
-                <Text>Un profesional dedicado a innovar y aprender nuevas tecnologias
-                    para desarrollar y poder resolver todo tipo de problematicas. Destaco por mi gran enfoque
-                    y trabajo en equipo, como tambien poder sobrellevar los desafios de forma autonoma.</Text>
+                <TitlePrime>What you can know about me. . .</TitlePrime>
+                <Text>A professional dedicated to innovating and learning new technologies
+                    to develop and be able to solve all types of problems. I stand out for my great focus
+                    and teamwork, as well as being able to overcome challenges independently.</Text>
             </ArticlePrime>
             <Seccion>
                 <Article>
