@@ -15,39 +15,24 @@ const ImageNetworks = styled.div`
     background-position: center;
     min-width: 4rem;
     height: 4rem;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     position: relative;
+    animation: filterShadow 2s infinite linear ;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            30deg, #d500f1, #6000f1, #7100F1, #6000f1, #d500f1, #7100F1
-        );
-        background-size: 800%;
-        border-radius: 50%;
-        filter: blur(8px);
-        animation: glowing 20s linear infinite;
-    }
-
-    @keyframes glowing {
-        0% {
-            background-position: 0 0;
+    @keyframes filterShadow {
+        0%{
+            filter: drop-shadow(0 0 5px #d500f1);
         }
-        50% {
-            background-position: 400% 0;
+        50%{
+            filter: drop-shadow(0 0 5px #7100F1);
         }
-        100% {
-            background-position: 0 0;
+        100%{
+            filter: drop-shadow(0 0 5px #d500f1);
         }
     }
 `;
+
 const Container = styled.div` 
     width: 100%;
     height: 5rem;
@@ -69,15 +54,15 @@ const Networks = () => {
     return (
         <PersonalNetworks>
         <Container>
-            <ImageNetworks img='src/assets/image/redes/linkedin-1-svgrepo-com.svg'></ImageNetworks>
+            <ImageNetworks img='src/assets/image/redes/linkedin.svg'></ImageNetworks>
             <LinkRedes href="https://www.linkedin.com/in/mauricio-mores-b3898817b/" >Linkedin: Mauricio Mores</LinkRedes>
         </Container>
         <Container>
-            <ImageNetworks img='src/assets/image/iconTechnologies/github.svg' ></ImageNetworks>
+            <ImageNetworks img='src/assets/image/redes/github.svg' ></ImageNetworks>
             <LinkRedes href="https://github.com/MauMor13">Git Hub: Mauricio Mores</LinkRedes>
         </Container>
         <Container>
-            <ImageNetworks img='src/assets/image/redes/gmail-svgrepo-com.svg' ></ImageNetworks>
+            <ImageNetworks img='src/assets/image/redes/gmail.svg' ></ImageNetworks>
             <LinkRedes href="mailto:mauri.f.mores@gmail.com">Gmail: mauri.f.mores@gmail.com</LinkRedes>
         </Container>
         </PersonalNetworks>

@@ -41,20 +41,75 @@ const ContainCards = styled.section`
 `;
 
 const Card = styled.article`
-    border-radius: 1rem;
+    background-image: url(${(props) => props.img});
+    filter: drop-shadow(-5px -5px 8px #ffffff86);
+    background-position: start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
     width: 36rem;
     height: 20rem;
     margin: 1rem;
-    background-color: red;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        div{
+            left: 0;
+        }
+    }
 `;
 
-const TextCard = styled.p `
+const ContentCard = styled.div`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 2rem;
+    left: -100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0808086c;
+    transition: all 2s;
+`;
+
+const Logo = styled.img`
+    height: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(-5px 0 8px #383636a1);
+    animation: jumpsLogo 1s infinite;
+
+    @keyframes jumpsLogo {
+        0%{
+            top:50%
+        }
+        50%{
+            top:45%;
+        }
+        100%{
+            top:50%
+        }
+    }
+`;
+
+const TitleCard = styled.h3`
+    font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+`;
+
+const TextCard = styled.p`
     font-family: 'Courier New', Courier, monospace;
     display: block; 
     font-size: 1.3rem;
     padding-top: 1rem;
     text-align: center;
+    height: 10rem;
 `;
+
 const Projects = () => {
     return (
         <Main>
@@ -65,25 +120,45 @@ const Projects = () => {
                     creativity.</Text>
             </InitText>
             <ContainCards>
-                <Card>
-                    <TextCard>
-                    
-                    </TextCard>
-                </Card>
-                <Card>
-                    <TextCard>
+                <Card img={'src/assets/image/imgProyect/pexels-guilherme-rossi-1755693.jpg'}>
+                    <Logo src='src/assets/image/imgProyect/Logo.svg'></Logo>
+                    <ContentCard>
+                        <TitleCard>Diamond Bank</TitleCard>
+                        <TextCard>
 
-                    </TextCard>
+                        </TextCard>
+                    </ContentCard>
                 </Card>
-                <Card>
-                    <TextCard>
-
-                    </TextCard>
+                <Card img={'src/assets/image/imgProyect/banner0.jpg'}>
+                    <Logo src='src/assets/image/imgProyect/iconoFondoNegroPNG.png'></Logo>
+                    <ContentCard>
+                        <TitleCard>Adstore Detailing</TitleCard>
+                        <TextCard>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. 
+                        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, 
+                        dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper 
+                        congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est 
+                        eleifend mi, non fermentum diam nisl sit amet erat.
+                        </TextCard>
+                    </ContentCard>
                 </Card>
-                <Card>
-                    <TextCard>
+                <Card img={'src/assets/image/imgProyect/fondo2.png'}>
+                    <Logo src='src/assets/image/imgProyect/patitasFelices.png' style={{ height: '2rem' }}></Logo>
+                    <ContentCard>
+                        <TitleCard>Happy Paws</TitleCard>
+                        <TextCard>
 
-                    </TextCard>
+                        </TextCard>
+                    </ContentCard>
+                </Card>
+                <Card img={'src/assets/image/imgProyect/robots.webp'}>
+                    <Logo src='src/assets/image/imgProyect/friendly-robot-waving-full-body.svg'></Logo>
+                    <ContentCard>
+                        <TitleCard>Programming and Robotics</TitleCard>
+                        <TextCard>
+
+                        </TextCard>
+                    </ContentCard>
                 </Card>
             </ContainCards>
         </Main>
