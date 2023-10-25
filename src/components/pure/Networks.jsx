@@ -13,25 +13,38 @@ const PersonalNetworks = styled.section`
 const ImageNetworks = styled.div`
     background-image: url(${(props) => props.img});
     background-position: center;
-    width: 4rem;
+    min-width: 4rem;
     height: 4rem;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    animation: heartBeat 1.5s infinite;
-    
-    @keyframes heartBeat {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            30deg, #d500f1, #6000f1, #7100F1, #6000f1, #d500f1, #7100F1
+        );
+        background-size: 800%;
+        border-radius: 50%;
+        filter: blur(8px);
+        animation: glowing 20s linear infinite;
+    }
+
+    @keyframes glowing {
         0% {
-            filter: opacity(50%);
-            transform: scale(0.9);
-            box-shadow: inset;
+            background-position: 0 0;
         }
         50% {
-            filter: opacity(100%);
-            transform: scale(1);
+            background-position: 400% 0;
         }
         100% {
-            filter: opacity(50%);
-            transform: scale(0.9);
+            background-position: 0 0;
         }
     }
 `;
@@ -46,7 +59,10 @@ const Container = styled.div`
 const LinkRedes = styled.a`
     font-size: 1.5rem;
     margin-left: 1rem;
+    width: 7rem;
     text-decoration: none;
+    flex-grow: 1;
+    word-wrap: break-word;
 `;
 
 const Networks = () => {

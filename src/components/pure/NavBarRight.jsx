@@ -48,7 +48,7 @@ const ButtonNavClose = styled.div`
 
     &:hover {
         animation-name: rotateAnimation;
-        animation-duration: 1.5s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
         
         span {
@@ -61,7 +61,7 @@ const ButtonNavClose = styled.div`
             transform: rotate(0deg);
         }
         100% {
-            transform: rotate(180deg);
+            transform: rotate(90deg);
         }
     }
 
@@ -73,6 +73,7 @@ const ButtonNavClose = styled.div`
         border-radius: 1rem;
         transform: rotate(45deg);
         display: block;
+        transition: all 1s;
     }
 
     span:nth-child(2) {
@@ -91,11 +92,11 @@ const NavBarRight = (props) => {
                 <span></span>
                 <span></span>
             </ButtonNavClose>
-            <Link to="/"><ButtonNav text="Home" /></Link>
-            <Link to="/About"><ButtonNav text="About me" /></Link>
-            <Link to="/Technologies"><ButtonNav text="Technologies" /></Link>
-            <Link to="/Projects"><ButtonNav text="Projects" /></Link>
-            <Link to="/Contact"><ButtonNav text="Contact" /></Link>
+            <Link to="/" onClick={handleButtonClick}><ButtonNav text="Home" /></Link>
+            <Link to="/About" onClick={handleButtonClick}><ButtonNav text="About me" /></Link>
+            <Link to="/Technologies" onClick={handleButtonClick}><ButtonNav text="Technologies" /></Link>
+            <Link to="/Projects" onClick={handleButtonClick}><ButtonNav text="Projects" /></Link>
+            <Link to="/Contact" onClick={handleButtonClick}><ButtonNav text="Contact" /></Link>
         </NavBar>
     );
 }

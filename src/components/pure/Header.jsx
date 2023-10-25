@@ -31,6 +31,7 @@ const NavMenu = styled.div`
     width: 3rem;
     height: 2rem;
     position: relative;
+    
     span:first-child { 
         background-color: #7100F1;
         width: 100%;
@@ -39,6 +40,7 @@ const NavMenu = styled.div`
         height: 4px;
         border-radius: 1rem;
         display: block;
+        transition: all 1.5s;
     }
     span:nth-child(2){
         background-color: #7100F1;
@@ -49,6 +51,7 @@ const NavMenu = styled.div`
         right: 0;
         border-radius: 1rem;
         display: block;
+        transition: all 1s;
     }
     span:nth-child(3){
         background-color: #7100F1;
@@ -59,6 +62,7 @@ const NavMenu = styled.div`
         height: 4px;
         border-radius: 1rem;
         display: block;
+        transition: all .5s;
     }
     &:hover{
     span:first-child, 

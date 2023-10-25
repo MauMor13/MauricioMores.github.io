@@ -56,7 +56,7 @@ const Form = styled.form`
     flex-direction: column;
     justify-content: space-around;
     width: 45%;
-    @media (max-width:950px){
+    @media (max-width:850px){
         width: 100%;
         margin-bottom: 1rem;
     } 
@@ -153,7 +153,7 @@ const Redes = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 45%;
-    @media (max-width:950px){
+    @media (max-width:850px){
         width: 100%;
     } 
 `;
@@ -228,7 +228,6 @@ const Contact = () => {
                     <SubmitButton onClick={submitForm}>
                         Send Message
                     </SubmitButton>
-                    <p>{responseMessage}</p>
                 </Form>
                 <Redes>
                     <TitleTwo>Networks :</TitleTwo>
