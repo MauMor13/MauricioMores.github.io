@@ -70,7 +70,7 @@ const ContentCard = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #0808086c;
+    background-color: #000000a3;
     transition: all 2s;
 `;
 
@@ -96,7 +96,7 @@ const Logo = styled.img`
     }
 `;
 
-const TitleCard = styled.h3`
+const TitleCard = styled.h2`
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
 `;
@@ -104,10 +104,20 @@ const TitleCard = styled.h3`
 const TextCard = styled.p`
     font-family: 'Courier New', Courier, monospace;
     display: block; 
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding-top: 1rem;
     text-align: center;
-    height: 10rem;
+`;
+
+const ButtonCard = styled.button`
+    padding: .3rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
 `;
 
 const Projects = () => {
@@ -125,8 +135,13 @@ const Projects = () => {
                     <ContentCard>
                         <TitleCard>Diamond Bank</TitleCard>
                         <TextCard>
-
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. 
+                        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, 
+                        dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper 
+                        congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est 
+                        eleifend mi, non fermentum diam nisl sit amet erat.
                         </TextCard>
+                        <ButtonCard>More . . .</ButtonCard>
                     </ContentCard>
                 </Card>
                 <Card img={'src/assets/image/imgProyect/banner0.jpg'}>
@@ -147,7 +162,11 @@ const Projects = () => {
                     <ContentCard>
                         <TitleCard>Happy Paws</TitleCard>
                         <TextCard>
-
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. 
+                        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, 
+                        dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper 
+                        congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est 
+                        eleifend mi, non fermentum diam nisl sit amet erat.
                         </TextCard>
                     </ContentCard>
                 </Card>
@@ -156,7 +175,11 @@ const Projects = () => {
                     <ContentCard>
                         <TitleCard>Programming and Robotics</TitleCard>
                         <TextCard>
-
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. 
+                        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, 
+                        dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper 
+                        congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est 
+                        eleifend mi, non fermentum diam nisl sit amet erat.
                         </TextCard>
                     </ContentCard>
                 </Card>
