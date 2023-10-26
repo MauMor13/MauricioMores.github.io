@@ -109,15 +109,69 @@ const TextCard = styled.p`
     text-align: center;
 `;
 
-const ButtonCard = styled.button`
+const ButtonCard = styled.a`
+    cursor: pointer;
+    text-decoration: none;
     padding: .3rem;
     border-radius: .5rem;
-    border: none;
-    background-color: black;
+    border: 2px solid white;
+    background-color: transparent;
     color: white;
     text-align: center;
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 3s;
+    &:hover{
+        border: 2px solid black;
+        color: black;
+
+        &::before{
+            animation: desplaceBefore 1.5s forwards;
+            @keyframes desplaceBefore {
+                0%{
+                    right: 110%;
+                }
+                100%{
+                    right: 10%;
+                }
+            }
+        }
+        &::after{
+            animation: desplaceAfter 1.5s forwards;
+            @keyframes desplaceAfter {
+                0%{
+                    left: 110%;
+                }
+                100%{
+                    left: 10%;
+                }
+            }
+        }
+    }
+    &::before{
+        background-color: #8f30fd;
+        content: "";
+        width: 5rem;
+        height: 4rem;
+        top: -100%;
+        right: 110%;
+        transform: rotateZ(25deg);
+        position: absolute;
+        z-index: -1;
+    }
+    &::after{
+        background-color: #8f30fd;
+        content: "";
+        width: 5rem;
+        height: 4rem;
+        top: -100%;
+        left: 110%;
+        transform: rotateZ(-25deg);
+        position: absolute;
+        z-index: -1;
+    }
 `;
 
 const Projects = () => {
@@ -141,7 +195,7 @@ const Projects = () => {
                         congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est 
                         eleifend mi, non fermentum diam nisl sit amet erat.
                         </TextCard>
-                        <ButtonCard>More . . .</ButtonCard>
+                        <ButtonCard href='https://github.com/MauMor13/Homebanking'>More . . .</ButtonCard>
                     </ContentCard>
                 </Card>
                 <Card img={'src/assets/image/imgProyect/banner0.jpg'}>
@@ -155,6 +209,7 @@ const Projects = () => {
                         congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est 
                         eleifend mi, non fermentum diam nisl sit amet erat.
                         </TextCard>
+                        <ButtonCard href='https://github.com/MauMor13/Proyecto-Adstore-Detailing'>More . . .</ButtonCard>
                     </ContentCard>
                 </Card>
                 <Card img={'src/assets/image/imgProyect/fondo2.png'}>
@@ -168,6 +223,7 @@ const Projects = () => {
                         congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est 
                         eleifend mi, non fermentum diam nisl sit amet erat.
                         </TextCard>
+                        <ButtonCard href='https://github.com/MauMor13/patitas_felices'>More . . .</ButtonCard>
                     </ContentCard>
                 </Card>
                 <Card img={'src/assets/image/imgProyect/robots.webp'}>
@@ -181,6 +237,7 @@ const Projects = () => {
                         congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est 
                         eleifend mi, non fermentum diam nisl sit amet erat.
                         </TextCard>
+                        <ButtonCard href='src/assets/image/imgProyect/Programacion_y_Robotica.pdf' download={'Programacion_y_Robotica'}>More . . .</ButtonCard>
                     </ContentCard>
                 </Card>
             </ContainCards>
