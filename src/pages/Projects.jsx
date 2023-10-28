@@ -189,11 +189,8 @@ const Projects = () => {
                     <ContentCard>
                         <TitleCard>Diamond Bank</TitleCard>
                         <TextCard>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. 
-                        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, 
-                        dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper 
-                        congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est 
-                        eleifend mi, non fermentum diam nisl sit amet erat.
+                        Este fue un proyecto realizado de forma autonoma, el cual fue diseñado pensado en el usuario 
+                        
                         </TextCard>
                         <ButtonCard href='https://github.com/MauMor13/Homebanking'>More . . .</ButtonCard>
                     </ContentCard>

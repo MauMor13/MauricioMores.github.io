@@ -62,7 +62,8 @@ const CarouselTechnologies = () => {
         'src/assets/image/iconTechnologies/sql.svg',
         'src/assets/image/iconTechnologies/styled.svg',
         'src/assets/image/iconTechnologies/trello.svg',
-        'src/assets/image/iconTechnologies/vue.svg'
+        'src/assets/image/iconTechnologies/vue.svg',
+        'src/assets/image/iconTechnologies/bootstrap.svg'
     ];
 
     return (
