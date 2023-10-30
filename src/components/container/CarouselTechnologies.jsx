@@ -48,6 +48,7 @@ const Icon = styled.img`
 const CarouselTechnologies = () => {
 
     const iconTechnologies = [
+        'src/assets/image/iconTechnologies/swiper-logo.svg',
         'src/assets/image/iconTechnologies/css.svg',
         'src/assets/image/iconTechnologies/git.svg',
         'src/assets/image/iconTechnologies/github.svg',

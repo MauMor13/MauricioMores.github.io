@@ -39,7 +39,7 @@ const Technologies = () => {
                 technologies. I started with C and C++ for microcontroller programming, 
                 and then delved into Arduino for hardware development. In web 
                 development, I’ve worked with Java, Spring Boot, Hibernate, JavaScript, 
-                React, Vue.js, HTML, CSS, Bootstrap, and Styled Components. I’m familiar 
+                React, Vue.js, HTML, CSS, Bootstrap, Swiper, and Styled Components. I’m familiar 
                 with version control using Git and GitHub. As for databases, I’ve used 
                 SQL and PostgreSQL. In addition, I have collaborative work experience 
                 using agile methodologies and tools like Trello and Jira.</Text>
