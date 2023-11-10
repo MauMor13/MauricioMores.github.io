@@ -1,6 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -28,7 +28,7 @@ const AppLoading = () => {
 
   return (
     <StyleSheetManager shouldForwardProp={isPropValid}>
-      <BrowserRouter>
+      <HashRouter>
         <div className='container_body'>
           <Header />
           <Routes>
@@ -41,7 +41,7 @@ const AppLoading = () => {
           </Routes>
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </StyleSheetManager>
   )
 }
