@@ -25,7 +25,7 @@ const AppLoading = () => {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basenamre={process.env.PUBLIC_URL}>
     <div className='container_body'>
       <Header />
         <Routes>
