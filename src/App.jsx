@@ -28,7 +28,7 @@ const AppLoading = () => {
 
   return (
     <StyleSheetManager shouldForwardProp={isPropValid}>
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <div className='container_body'>
           <Header />
           <Routes>
