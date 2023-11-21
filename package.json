@@ -1,18 +1,19 @@
 {
   "name": "proyecto_portfolio",
-  "homepage": "https://maumor13.github.io/MauricioMores.github.io",
+  "homepage": "http://maumor13.github.io/mauriciomores",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "node_modules/.bin/vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.2",
