@@ -10,17 +10,17 @@
 
 @font-face {
     font-family: 'Blouse';
-    src: url('src/assets/font/Blouse.ttf') format('truetype');
+    src: url('./assets/font/Blouse.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'ElectroBox';
-    src: url('src/assets/font/eElectroBox.ttf') format('truetype');
+    src: url('./assets/font/eElectroBox.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Black_Ashpalt';
-    src: url('src/assets/font/Black_Ashpalt.ttf') format('truetype');
+    src: url('./assets/font/Black_Ashpalt.ttf') format('truetype');
 }
 
 * {
