@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Outlet, Link } from "react-router-dom";
 import styled from 'styled-components';
 import ButtonNav from './ButtonNav';
-import NavBarRight from './NavBarRight'
+import NavBarRight from './NavBarRight';
+import img1 from '../../assets/image/svg_20230707_232204_0000.svg'
 
 const NavBar = styled.header`
     display: flex;
@@ -18,7 +19,7 @@ const Nav = styled.nav`
     align-items: center;
 `;
 const Img = styled.div`
-    background-image: url(src/assets/image/svg_20230707_232204_0000.svg);
+    background-image: url(${img1});
     background-position: center;
     background-size: cover;
     width: 10rem;
