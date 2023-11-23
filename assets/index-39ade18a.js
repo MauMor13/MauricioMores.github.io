@@ -4403,26 +4403,26 @@ void main() {
     span:nth-child(2) {
         transform: rotate(-45deg);
     }
-`,Qx=t=>{const e=()=>{t.closeNavBar()};return N.jsxs(Y2,{children:[N.jsxs(q2,{onClick:e,children:[N.jsx("span",{}),N.jsx("span",{})]}),N.jsx(ei,{to:"/",onClick:e,children:N.jsx(Vn,{text:"Home"})}),N.jsx(ei,{to:"/About",onClick:e,children:N.jsx(Vn,{text:"About me"})}),N.jsx(ei,{to:"/Technologies",onClick:e,children:N.jsx(Vn,{text:"Technologies"})}),N.jsx(ei,{to:"/Projects",onClick:e,children:N.jsx(Vn,{text:"Projects"})}),N.jsx(ei,{to:"/Contact",onClick:e,children:N.jsx(Vn,{text:"Contact"})})]})};Qx.propTypes={closeNavBar:lr.func.isRequired};const K2=ve.header`
+`,Qx=t=>{const e=()=>{t.closeNavBar()};return N.jsxs(Y2,{children:[N.jsxs(q2,{onClick:e,children:[N.jsx("span",{}),N.jsx("span",{})]}),N.jsx(ei,{to:"/",onClick:e,children:N.jsx(Vn,{text:"Home"})}),N.jsx(ei,{to:"/About",onClick:e,children:N.jsx(Vn,{text:"About me"})}),N.jsx(ei,{to:"/Technologies",onClick:e,children:N.jsx(Vn,{text:"Technologies"})}),N.jsx(ei,{to:"/Projects",onClick:e,children:N.jsx(Vn,{text:"Projects"})}),N.jsx(ei,{to:"/Contact",onClick:e,children:N.jsx(Vn,{text:"Contact"})})]})};Qx.propTypes={closeNavBar:lr.func.isRequired};const K2="https://maumor13.github.io/mauriciomores/assets/svg_20230707_232204_0000-7c118957.svg",Z2=ve.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-`,Z2=ve.nav` 
+`,Q2=ve.nav` 
     padding: 0 2rem 0 2rem;
     width: 35rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-`,Q2=ve.div`
-    background-image: url(../../assets/image/svg_20230707_232204_0000.svg);
+`,J2=ve.div`
+    background-image: url(${K2});
     background-position: center;
     background-size: cover;
     width: 10rem;
     height: 8rem;
     padding-top: 1rem;
     background-color: transparent;
-`,J2=ve.div`
+`,eI=ve.div`
     margin: 2rem;
     width: 3rem;
     height: 2rem;
@@ -4467,7 +4467,7 @@ void main() {
         background-color: white;
     }
     }
-`,eI=()=>{const[t,e]=ee.useState(window.innerWidth),[n,i]=ee.useState(!1);ee.useEffect(()=>{const s=()=>{e(window.innerWidth)};return window.addEventListener("resize",s),()=>{window.removeEventListener("resize",s)}},[]);const r=()=>{i(!n)};return N.jsxs(K2,{children:[N.jsx(Q2,{}),t<700?N.jsxs(J2,{onClick:r,children:[N.jsx("span",{}),N.jsx("span",{}),N.jsx("span",{})]}):N.jsxs(Z2,{children:[N.jsx(ei,{to:"/",children:N.jsx(Vn,{text:"Home"})}),N.jsx(ei,{to:"/About",children:N.jsx(Vn,{text:"About me"})}),N.jsx(ei,{to:"/Technologies",children:N.jsx(Vn,{text:"Technologies"})}),N.jsx(ei,{to:"/Projects",children:N.jsx(Vn,{text:"Projects"})}),N.jsx(ei,{to:"/Contact",children:N.jsx(Vn,{text:"Contact"})})]}),n&&t<700&&N.jsx(Qx,{closeNavBar:r}),N.jsx(SM,{})]})},tI=ve.div`
+`,tI=()=>{const[t,e]=ee.useState(window.innerWidth),[n,i]=ee.useState(!1);ee.useEffect(()=>{const s=()=>{e(window.innerWidth)};return window.addEventListener("resize",s),()=>{window.removeEventListener("resize",s)}},[]);const r=()=>{i(!n)};return N.jsxs(Z2,{children:[N.jsx(J2,{}),t<700?N.jsxs(eI,{onClick:r,children:[N.jsx("span",{}),N.jsx("span",{}),N.jsx("span",{})]}):N.jsxs(Q2,{children:[N.jsx(ei,{to:"/",children:N.jsx(Vn,{text:"Home"})}),N.jsx(ei,{to:"/About",children:N.jsx(Vn,{text:"About me"})}),N.jsx(ei,{to:"/Technologies",children:N.jsx(Vn,{text:"Technologies"})}),N.jsx(ei,{to:"/Projects",children:N.jsx(Vn,{text:"Projects"})}),N.jsx(ei,{to:"/Contact",children:N.jsx(Vn,{text:"Contact"})})]}),n&&t<700&&N.jsx(Qx,{closeNavBar:r}),N.jsx(SM,{})]})},nI=ve.div`
     position: fixed;
     display: flex;
     justify-content: center;
@@ -4480,7 +4480,7 @@ void main() {
     backdrop-filter: blur(10px); 
     transition: opacity 0.7s ease-in-out; 
     opacity: ${t=>t.modalFooterVisible?"0":"1"};
-`,nI=ve.div`
+`,iI=ve.div`
     margin: 1rem; 
     background: rgba(0, 0, 0, 0.5); 
     contain: content;
@@ -4511,7 +4511,7 @@ void main() {
         opacity: 1;
     }
     }
-`,iI=ve.div`
+`,rI=ve.div`
     position: absolute;
     width: 2rem;
     height: 2rem;
@@ -4554,16 +4554,16 @@ void main() {
     span:nth-child(2) {
         transform: rotate(-45deg);
     }
-`,rI=ve.h1`
+`,sI=ve.h1`
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-`,Jx=t=>N.jsx(tI,{children:N.jsxs(nI,{children:[N.jsxs(iI,{onClick:t.closeModal,children:[N.jsx("span",{}),N.jsx("span",{})]}),N.jsx(rI,{children:"Contact Me"}),N.jsx(Kx,{}),N.jsx(Zx,{})]})});Jx.propTypes={closeModal:lr.func.isRequired,modalFooterVisible:lr.bool.isRequired};const sI=ve.footer`
+`,Jx=t=>N.jsx(nI,{children:N.jsxs(iI,{children:[N.jsxs(rI,{onClick:t.closeModal,children:[N.jsx("span",{}),N.jsx("span",{})]}),N.jsx(sI,{children:"Contact Me"}),N.jsx(Kx,{}),N.jsx(Zx,{})]})});Jx.propTypes={closeModal:lr.func.isRequired,modalFooterVisible:lr.bool.isRequired};const oI=ve.footer`
     cursor: default;
     padding-bottom: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 2rem 0 2rem;
-`,oI=ve.button`
+`,aI=ve.button`
     text-decoration: none;
     background-color: #000000a7;
     padding: .5rem;
@@ -4602,17 +4602,17 @@ void main() {
             background-position: 0 0;
         }
     }
-`,aI=ve.span`
+`,lI=ve.span`
     font-size: 1.3rem;
     color: white;
     font-family: 'Black_Ashpalt','Courier New', Courier, monospace;
-`,lI=()=>{const[t,e]=ee.useState(!1),n=()=>{e(!t)};return N.jsxs(sI,{children:[t&&N.jsx(Jx,{closeModal:n,modalFooterVisible:t}),N.jsxs(oI,{onClick:n,children:[" Full Stack Java Developer ","= ( ) =>","{",N.jsx(aI,{children:"  Mauricio Mores "}),"}"]})]})},cI=ve.div` 
+`,cI=()=>{const[t,e]=ee.useState(!1),n=()=>{e(!t)};return N.jsxs(oI,{children:[t&&N.jsx(Jx,{closeModal:n,modalFooterVisible:t}),N.jsxs(aI,{onClick:n,children:[" Full Stack Java Developer ","= ( ) =>","{",N.jsx(lI,{children:"  Mauricio Mores "}),"}"]})]})},uI=ve.div` 
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-`,uI=ve.div`
+`,dI=ve.div`
     background-image: url(src/assets/image/svg_20230707_232204_0000.svg);
     background-position: center;
     background-size: cover;
@@ -4636,4 +4636,4 @@ void main() {
             transform: scale(1);
         }
     }
-`,dI=()=>N.jsx(cI,{children:N.jsx(uI,{})}),fI=()=>{const[t,e]=ee.useState(!0);return ee.useEffect(()=>{setTimeout(()=>{e(!1)},2e3)},[]),t?N.jsx(dI,{}):N.jsx(Uw,{shouldForwardProp:NM,children:N.jsx(RM,{children:N.jsxs("div",{className:"container_body",children:[N.jsx(eI,{}),N.jsxs(MM,{children:[N.jsx(Er,{path:"/",element:N.jsx(PP,{})}),N.jsx(Er,{path:"About",element:N.jsx(g2,{})}),N.jsx(Er,{path:"Projects",element:N.jsx(E2,{})}),N.jsx(Er,{path:"Technologies",element:N.jsx(I2,{})}),N.jsx(Er,{path:"Contact",element:N.jsx(j2,{})}),N.jsx(Er,{path:"*",element:N.jsx(X2,{})})]}),N.jsx(lI,{})]})})})};function hI(){return N.jsx(fI,{})}xd.createRoot(document.getElementById("root")).render(N.jsx(hI,{}));
+`,fI=()=>N.jsx(uI,{children:N.jsx(dI,{})}),hI=()=>{const[t,e]=ee.useState(!0);return ee.useEffect(()=>{setTimeout(()=>{e(!1)},2e3)},[]),t?N.jsx(fI,{}):N.jsx(Uw,{shouldForwardProp:NM,children:N.jsx(RM,{children:N.jsxs("div",{className:"container_body",children:[N.jsx(tI,{}),N.jsxs(MM,{children:[N.jsx(Er,{path:"/",element:N.jsx(PP,{})}),N.jsx(Er,{path:"About",element:N.jsx(g2,{})}),N.jsx(Er,{path:"Projects",element:N.jsx(E2,{})}),N.jsx(Er,{path:"Technologies",element:N.jsx(I2,{})}),N.jsx(Er,{path:"Contact",element:N.jsx(j2,{})}),N.jsx(Er,{path:"*",element:N.jsx(X2,{})})]}),N.jsx(cI,{})]})})})};function pI(){return N.jsx(hI,{})}xd.createRoot(document.getElementById("root")).render(N.jsx(pI,{}));
