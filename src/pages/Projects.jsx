@@ -188,8 +188,8 @@ const Projects = () => {
                     creativity.</Text>
             </InitText>
             <ContainCards>
-                <Card img={'src/assets/image/imgProyect/pexels-guilherme-rossi-1755693.jpg'}>
-                    <Logo src='src/assets/image/imgProyect/Logo.svg'></Logo>
+                <Card img={'../assets/image/imgProyect/pexels-guilherme-rossi-1755693.jpg'}>
+                    <Logo src='../assets/image/imgProyect/Logo.svg'></Logo>
                     <ContentCard>
                         <TitleCard>Diamond Bank</TitleCard>
                         <TextCard>
@@ -203,8 +203,8 @@ const Projects = () => {
                         <ButtonCard href='https://github.com/MauMor13/Homebanking'>More . . .</ButtonCard>
                     </ContentCard>
                 </Card>
-                <Card img={'src/assets/image/imgProyect/banner0.jpg'}>
-                    <Logo src='src/assets/image/imgProyect/iconoFondoNegroPNG.png'></Logo>
+                <Card img={'../assets/image/imgProyect/banner0.jpg'}>
+                    <Logo src='../assets/image/imgProyect/iconoFondoNegroPNG.png'></Logo>
                     <ContentCard>
                         <TitleCard>Adstore Detailing</TitleCard>
                         <TextCard>
@@ -222,8 +222,8 @@ const Projects = () => {
                         <ButtonCard href='https://github.com/MauMor13/Proyecto-Adstore-Detailing'>More . . .</ButtonCard>
                     </ContentCard>
                 </Card>
-                <Card img={'src/assets/image/imgProyect/fondo2.png'}>
-                    <Logo src='src/assets/image/imgProyect/patitasFelices.png' style={{ height: '2rem' }}></Logo>
+                <Card img={'../assets/image/imgProyect/fondo2.png'}>
+                    <Logo src='../assets/image/imgProyect/patitasFelices.png' style={{ height: '2rem' }}></Logo>
                     <ContentCard>
                         <TitleCard>Happy Paws</TitleCard>
                         <TextCard>
@@ -243,8 +243,8 @@ const Projects = () => {
                         <ButtonCard href='https://github.com/MauMor13/patitas_felices'>More . . .</ButtonCard>
                     </ContentCard>
                 </Card>
-                <Card img={'src/assets/image/imgProyect/robots.webp'}>
-                    <Logo src='src/assets/image/imgProyect/friendly-robot-waving-full-body.svg'></Logo>
+                <Card img={'../assets/image/imgProyect/robots.webp'}>
+                    <Logo src='../assets/image/imgProyect/friendly-robot-waving-full-body.svg'></Logo>
                     <ContentCard>
                         <TitleCard>Programming and Robotics</TitleCard>
                         <TextCard>
@@ -264,7 +264,7 @@ const Projects = () => {
                         proud to be part of this endeavor, guiding students towards a future enriched with technological knowledge 
                         and possibilities.
                         </TextCard>
-                        <ButtonCard href='src/assets/image/imgProyect/Programacion_y_Robotica.pdf' download={'Programacion_y_Robotica'}>More . . .</ButtonCard>
+                        <ButtonCard href='../assets/image/imgProyect/Programacion_y_Robotica.pdf' download={'Programacion_y_Robotica'}>More . . .</ButtonCard>
                     </ContentCard>
                 </Card>
             </ContainCards>
