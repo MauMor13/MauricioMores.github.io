@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import img1 from '../../assets/image/svg_20230707_232204_0000.svg';
 
 
 const Container = styled.div` 
@@ -9,7 +10,7 @@ const Container = styled.div`
     align-items: center;
 `;
 const Img = styled.div`
-    background-image: url(src/assets/image/svg_20230707_232204_0000.svg);
+    background-image: url(${img1});
     background-position: center;
     background-size: cover;
     background-color: transparent;
