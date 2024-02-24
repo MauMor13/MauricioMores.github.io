@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import img1 from '../../assets/image/imgHDFull/gato-astronauta_3840x2400_xtrafondos.com.jpg'
+import img2 from '../../assets/image/imgHDFull/gato-con-estrellas-de-fondo_3840x2160_xtrafondos.com.jpg';
+import img3 from '../../assets/image/imgHDFull/gato-con-mariposa-de-fantasia_3840x2160_xtrafondos.com.jpg';
+import img4 from '../../assets/image/imgHDFull/parado-en-el-borde-de-dos-mundos_3840x2160_xtrafondos.com.jpg';
 
 const ContainCube = styled.div`
     width: 90%;
@@ -35,10 +39,10 @@ const CubeRotateAnimation = () => {
 
         const geometry = new THREE.BoxGeometry(1, 1, 1);
         const texture = [
-            new THREE.TextureLoader().load('src/assets/image/imgHDFull/gato-astronauta_3840x2400_xtrafondos.com.jpg'),
-            new THREE.TextureLoader().load('src/assets/image/imgHDFull/gato-con-estrellas-de-fondo_3840x2160_xtrafondos.com.jpg'),
-            new THREE.TextureLoader().load('src/assets/image/imgHDFull/gato-con-mariposa-de-fantasia_3840x2160_xtrafondos.com.jpg'),
-            new THREE.TextureLoader().load('src/assets/image/imgHDFull/parado-en-el-borde-de-dos-mundos_3840x2160_xtrafondos.com.jpg')
+            new THREE.TextureLoader().load(img1),
+            new THREE.TextureLoader().load(img2),
+            new THREE.TextureLoader().load(img3),
+            new THREE.TextureLoader().load(img4)
         ];
         texture.forEach(texture => texture.colorSpace = THREE.SRGBColorSpace);
         const materials = [
