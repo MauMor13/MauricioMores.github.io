@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import WritingText from "../components/container/WritingText.jsx";
 import CubeRotateAnimation from '../components/container/CubeRotateAnimation.jsx';
+import arrowLeft from '../assets/image/arrow-prev-svgrepo-com.svg';
+import arrowRight from '../assets/image/arrow-next-svgrepo-com.svg';
 
 const Main = styled.main`
     display: flex;
@@ -107,7 +109,7 @@ const Home = () => {
                 query you may have.`} height={writingTextHeight} />
             </Article>
             <ArticleTwo>
-                <AnimateMoveImage><Img src="src/assets/image/arrow-prev-svgrepo-com.svg" /> SHIFT <Img src="src/assets/image/arrow-next-svgrepo-com.svg" /></AnimateMoveImage>
+                <AnimateMoveImage><Img src={arrowLeft} /> SHIFT <Img src={arrowRight} /></AnimateMoveImage>
                 <CubeRotateAnimation />
             </ArticleTwo>
         </Main>
