@@ -8,8 +8,7 @@ import img6 from '../../assets/image/iconTechnologies/java.svg';
 import img7 from '../../assets/image/iconTechnologies/jira.svg';
 import img8 from '../../assets/image/iconTechnologies/js.svg';
 import img9 from '../../assets/image/iconTechnologies/postgre.svg';
-import img10 from '../../assets/image/iconTechnologies/postgre.svg';
-import img11 from '../../assets/image/iconTechnologies/postgre.svg';
+import img10 from '../../assets/image/iconTechnologies/amazon-web-services-3.svg';
 import img12 from '../../assets/image/iconTechnologies/postman.svg';
 import img13 from '../../assets/image/iconTechnologies/react.svg';
 import img14 from '../../assets/image/iconTechnologies/spring.svg';
@@ -47,8 +46,8 @@ const Carousel = styled.div`
 }
 `;
 const ContentIcon = styled.div`
-    width: 9rem;
-	height: 9rem;
+    width: 8rem;
+	height: 8rem;
     display: flex;
     justify-content: center;
 	border: 1px solid #3b444b;
@@ -66,7 +65,7 @@ const Icon = styled.img`
 `;
 const CarouselTechnologies = () => {
 
-    const iconTechnologies = [ img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19];
+    const iconTechnologies = [ img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img12, img13, img14, img15, img16, img17, img18, img19];
 
     return (
         <ContainerCarousel>

@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import imgLinkedin from '../../assets/image/redes/linkedin.svg';
+import imgGithub from '../../assets/image/redes/github.svg';
+import imgGmail from '../../assets/image/redes/gmail.svg';
 
 const PersonalNetworks = styled.section`
     width: 100%;
@@ -10,8 +13,7 @@ const PersonalNetworks = styled.section`
     padding: 0 1rem 0 1rem;
 `;
 
-const ImageNetworks = styled.div`
-    background-image: url(${(props) => props.img});
+const ImageNetworks = styled.img`
     background-position: center;
     min-width: 4rem;
     height: 4rem;
@@ -54,15 +56,15 @@ const Networks = () => {
     return (
         <PersonalNetworks>
         <Container>
-            <ImageNetworks img='src/assets/image/redes/linkedin.svg'></ImageNetworks>
+            <ImageNetworks src={imgLinkedin} ></ImageNetworks>
             <LinkRedes href="https://www.linkedin.com/in/mauricio-mores-b3898817b/" >Linkedin: Mauricio Mores</LinkRedes>
         </Container>
         <Container>
-            <ImageNetworks img='src/assets/image/redes/github.svg' ></ImageNetworks>
+            <ImageNetworks src={imgGithub} ></ImageNetworks>
             <LinkRedes href="https://github.com/MauMor13">Git Hub: Mauricio Mores</LinkRedes>
         </Container>
         <Container>
-            <ImageNetworks img='src/assets/image/redes/gmail.svg' ></ImageNetworks>
+            <ImageNetworks src={imgGmail} ></ImageNetworks>
             <LinkRedes href="mailto:mauri.f.mores@gmail.com">Gmail: mauri.f.mores@gmail.com</LinkRedes>
         </Container>
         </PersonalNetworks>
