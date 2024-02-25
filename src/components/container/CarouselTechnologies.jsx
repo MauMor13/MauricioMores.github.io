@@ -1,4 +1,23 @@
 import styled from 'styled-components';
+import img1 from '../../assets/image/iconTechnologies/swiper-logo.svg';
+import img2 from '../../assets/image/iconTechnologies/css.svg';
+import img3 from '../../assets/image/iconTechnologies/git.svg';
+import img4 from '../../assets/image/iconTechnologies/github.svg';
+import img5 from '../../assets/image/iconTechnologies/html.svg';
+import img6 from '../../assets/image/iconTechnologies/java.svg';
+import img7 from '../../assets/image/iconTechnologies/jira.svg';
+import img8 from '../../assets/image/iconTechnologies/js.svg';
+import img9 from '../../assets/image/iconTechnologies/postgre.svg';
+import img10 from '../../assets/image/iconTechnologies/postgre.svg';
+import img11 from '../../assets/image/iconTechnologies/postgre.svg';
+import img12 from '../../assets/image/iconTechnologies/postman.svg';
+import img13 from '../../assets/image/iconTechnologies/react.svg';
+import img14 from '../../assets/image/iconTechnologies/spring.svg';
+import img15 from '../../assets/image/iconTechnologies/sql.svg';
+import img16 from '../../assets/image/iconTechnologies/styled.svg';
+import img17 from '../../assets/image/iconTechnologies/trello.svg';
+import img18 from '../../assets/image/iconTechnologies/vue.svg';
+import img19 from '../../assets/image/iconTechnologies/bootstrap.svg';
 
 const ContainerCarousel = styled.div`
 	width: 100%;
@@ -47,25 +66,7 @@ const Icon = styled.img`
 `;
 const CarouselTechnologies = () => {
 
-    const iconTechnologies = [
-        'src/assets/image/iconTechnologies/swiper-logo.svg',
-        'src/assets/image/iconTechnologies/css.svg',
-        'src/assets/image/iconTechnologies/git.svg',
-        'src/assets/image/iconTechnologies/github.svg',
-        'src/assets/image/iconTechnologies/html.svg',
-        'src/assets/image/iconTechnologies/java.svg',
-        'src/assets/image/iconTechnologies/jira.svg',
-        'src/assets/image/iconTechnologies/js.svg',
-        'src/assets/image/iconTechnologies/postgre.svg',
-        'src/assets/image/iconTechnologies/postman.svg',
-        'src/assets/image/iconTechnologies/react.svg',
-        'src/assets/image/iconTechnologies/spring.svg',
-        'src/assets/image/iconTechnologies/sql.svg',
-        'src/assets/image/iconTechnologies/styled.svg',
-        'src/assets/image/iconTechnologies/trello.svg',
-        'src/assets/image/iconTechnologies/vue.svg',
-        'src/assets/image/iconTechnologies/bootstrap.svg'
-    ];
+    const iconTechnologies = [ img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19];
 
     return (
         <ContainerCarousel>
