@@ -96,7 +96,7 @@ const Header = () => {
     return (
         <NavBar>
             <Img/>
-            {screenSize < 700 ? <NavMenu onClick={handleNavMenuClick}>
+            { screenSize < 700 ? <NavMenu onClick={handleNavMenuClick}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -107,7 +107,7 @@ const Header = () => {
                     <Link to="/Technologies"><ButtonNav text="Technologies" /></Link>
                     <Link to="/Projects"><ButtonNav text="Projects" /></Link>
                     <Link to="/Contact"><ButtonNav text="Contact" /></Link>
-                </Nav>}
+                </Nav> }
                 {isNavBarRightVisible && screenSize < 700 && <NavBarRight closeNavBar={handleNavMenuClick}/>}
             <Outlet />
         </NavBar>

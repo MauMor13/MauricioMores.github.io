@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import CardProject from '../components/container/CardProject';
-import imgCardOne from '../assets/image/imgProyect/pexels-guilherme-rossi-1755693.jpg';
+import imgCardOne from '../assets/image/imgProyect/pexel.jpg';
 import logoCardOne from '../assets/image/imgProyect/Logo.svg';
 import imageCardTwo from '../assets/image/imgProyect/banner0.jpg';
 import logoCardtwo from '../assets/image/imgProyect/iconoFondoNegroPNG.png';

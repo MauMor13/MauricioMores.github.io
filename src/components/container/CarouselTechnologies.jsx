@@ -20,6 +20,7 @@ import img19 from '../../assets/image/iconTechnologies/bootstrap.svg';
 
 const ContainerCarousel = styled.div`
 	width: 100%;
+    max-width: 800px;// cambio de altura maxima
     height: 22rem;
     margin-bottom: 2rem;
 	perspective: 1000px;

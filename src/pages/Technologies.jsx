@@ -8,6 +8,7 @@ const Main = styled.main`
     padding-right: 2rem;
     padding-left: 2rem;
     align-items: center; 
+    overflow: hidden;
 `;
 const Text = styled.p`
     font-family: 'Courier New', Courier, monospace;

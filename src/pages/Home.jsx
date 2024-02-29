@@ -33,6 +33,7 @@ const Article = styled.article`
     } 
 `;
 const ArticleTwo = styled.article`
+    margin-bottom: 1rem;
     position: relative;
     width: 50%;
     display: flex;
@@ -43,6 +44,7 @@ const ArticleTwo = styled.article`
     } 
 `;
 const AnimateMoveImage = styled.div`
+    z-index: 100;
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2rem;
     text-align: center;

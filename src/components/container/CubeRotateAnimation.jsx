@@ -2,15 +2,22 @@ import styled from 'styled-components';
 import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import img1 from '../../assets/image/imgHDFull/gato-astronauta_3840x2400_xtrafondos.com.jpg'
-import img2 from '../../assets/image/imgHDFull/gato-con-estrellas-de-fondo_3840x2160_xtrafondos.com.jpg';
+import img1 from '../../assets/image/imageProfile/photo1.jpg'
+import img2 from '../../assets/image/imageProfile/photo2.jpg';
 import img3 from '../../assets/image/imgHDFull/gato-con-mariposa-de-fantasia_3840x2160_xtrafondos.com.jpg';
 import img4 from '../../assets/image/imgHDFull/parado-en-el-borde-de-dos-mundos_3840x2160_xtrafondos.com.jpg';
 
 const ContainCube = styled.div`
-    width: 90%;
+    width: 100%;
     height: 35rem;
-    background-color: transparent;
+    position: relative;
+    background-color: tra;
+    filter: drop-shadow(
+        15px 15px 20px rgb(113, 0, 241,0.4)
+    );
+    @media (max-width:300px){
+        height: 30rem;
+    } 
 `;
 
 const CubeRotateAnimation = () => {
@@ -32,10 +39,10 @@ const CubeRotateAnimation = () => {
 
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
+        controls.enablePan= false;
         controls.enableZoom = false;
         controls.minPolarAngle = 1.5;
         controls.maxPolarAngle = 1.5;
-
 
         const geometry = new THREE.BoxGeometry(1, 1, 1);
         const texture = [
@@ -71,7 +78,7 @@ const CubeRotateAnimation = () => {
             camera.updateProjectionMatrix();
             renderer.setSize(clientWidth, clientHeight);
 
-            const newCubeScale = clientWidth < 600 ? 0.8 : 1;
+            const newCubeScale = clientWidth < 600 ? 0.75 : 0.95;
             cube.scale.set(newCubeScale, newCubeScale, newCubeScale);
         }
 
