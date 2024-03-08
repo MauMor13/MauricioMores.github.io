@@ -3,8 +3,8 @@ import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import img1 from '../../assets/image/imageProfile/photo1.jpg'
-import img2 from '../../assets/image/imageProfile/photo2.jpg';
-import img3 from '../../assets/image/imageProfile/photoIA1.jpg';
+import img3 from '../../assets/image/imageProfile/photo2.jpg';
+import img2 from '../../assets/image/imageProfile/photoIA1.jpg';
 import img4 from '../../assets/image/imageProfile/photo3.jpg';
 
 const ContainCube = styled.div`

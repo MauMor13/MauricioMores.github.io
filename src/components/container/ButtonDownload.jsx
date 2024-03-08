@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import hrefDownload from '../../assets/cv/Mauricio_Mores_Dev_Full_Stack_JAVA.pdf'
+import hrefDownload from '../../assets/cv/Mauricio_Mores_Full_Stack_Java_CV.pdf'
 
 const DownloadCv = styled.a`
     text-decoration: none;
@@ -126,7 +126,7 @@ const ButtonDownload = () => {
     };
 
     return (
-        <DownloadCv onClick={handleButtonClick} isActive={actionAnimation} href={hrefDownload} download={"Mauricio_Mores_Dev_Full_Stack_JAVA"}>Download CV</DownloadCv>
+        <DownloadCv onClick={handleButtonClick} isActive={actionAnimation} href={hrefDownload} download={"Mauricio_Mores_Full_Stack_Java_CV"}>Download CV</DownloadCv>
     );
 }
 

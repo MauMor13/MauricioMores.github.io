@@ -46,7 +46,7 @@ const ArticleTwo = styled.article`
 const AnimateMoveImage = styled.div`
     z-index: 100;
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
     position: absolute;
     color: white;
@@ -111,7 +111,7 @@ const Home = () => {
                 query you may have.`} height={writingTextHeight} />
             </Article>
             <ArticleTwo>
-                <AnimateMoveImage><Img src={arrowLeft} /> SHIFT <Img src={arrowRight} /></AnimateMoveImage>
+                <AnimateMoveImage><Img src={arrowLeft} /> CLICK AND TURN <Img src={arrowRight} /></AnimateMoveImage>
                 <CubeRotateAnimation />
             </ArticleTwo>
         </Main>

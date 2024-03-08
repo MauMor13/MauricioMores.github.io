@@ -144,10 +144,8 @@ const CardProject = (props) => {
         <Card img={props.img}>
             <Logo src={props.logo}></Logo>
             <ContentCard>
-                <TitleCard>{props.title}</TitleCard>
-                <TextCard>
-                {props.text}
-                </TextCard>
+                <TitleCard> {props.title} </TitleCard>
+                <TextCard> {props.text} </TextCard>
                 {props.download != null ? <ButtonCard href={props.href} download={props.download}>More . . .</ButtonCard> : <ButtonCard href={props.href}>More . . .</ButtonCard>}
             </ContentCard>
         </Card>
