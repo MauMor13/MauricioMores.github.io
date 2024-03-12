@@ -55,6 +55,7 @@ const CloseModal = styled.div`
     width: 2rem;
     height: 2rem;
     margin: 1rem;
+    cursor: pointer;
     top: 0;
     right: 0;
     display: flex;

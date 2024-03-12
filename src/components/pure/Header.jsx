@@ -95,18 +95,18 @@ const Header = () => {
 
     return (
         <NavBar>
-            <Img/>
+            <Link to="/"><Img/></Link>
             { screenSize < 700 ? <NavMenu onClick={handleNavMenuClick}>
                 <span></span>
                 <span></span>
                 <span></span>
             </NavMenu> :
                 <Nav>
-                    <Link to="/"><ButtonNav text="Home" /></Link>
-                    <Link to="/About"><ButtonNav text="About me" /></Link>
-                    <Link to="/Technologies"><ButtonNav text="Technologies" /></Link>
-                    <Link to="/Projects"><ButtonNav text="Projects" /></Link>
-                    <Link to="/Contact"><ButtonNav text="Contact" /></Link>
+                    <Link to="/"><ButtonNav route="/" text="Home" /></Link>
+                    <Link to="/About"><ButtonNav  route="/About" text="About me" /></Link>
+                    <Link to="/Technologies"><ButtonNav route="/Technologies" text="Technologies" /></Link>
+                    <Link to="/Projects"><ButtonNav route="/Projects" text="Projects" /></Link>
+                    <Link to="/Contact"><ButtonNav route="/Contact" text="Contact" /></Link>
                 </Nav> }
                 {isNavBarRightVisible && screenSize < 700 && <NavBarRight closeNavBar={handleNavMenuClick}/>}
             <Outlet />

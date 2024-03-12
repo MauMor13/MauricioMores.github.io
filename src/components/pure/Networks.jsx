@@ -35,19 +35,19 @@ const ImageNetworks = styled.img`
     }
 `;
 
-const Container = styled.div` 
+const Container = styled.a` 
     width: 100%;
     height: 5rem;
     display: flex;
+    text-decoration: none;
     align-items: center;
     justify-content: baseline;
     text-align: start;
 `;
-const LinkRedes = styled.a`
+const LinkRedes = styled.p`
     font-size: 1.5rem;
     margin-left: 1rem;
     width: 7rem;
-    text-decoration: none;
     flex-grow: 1;
     word-wrap: break-word;
 `;
@@ -55,17 +55,17 @@ const LinkRedes = styled.a`
 const Networks = () => {
     return (
         <PersonalNetworks>
-        <Container>
+        <Container target="_blank" href="https://www.linkedin.com/in/mauricio-mores-b3898817b/">
             <ImageNetworks src={imgLinkedin} ></ImageNetworks>
-            <LinkRedes href="https://www.linkedin.com/in/mauricio-mores-b3898817b/" >Linkedin: Mauricio Mores</LinkRedes>
+            <LinkRedes>Mauricio Mores</LinkRedes>
         </Container>
-        <Container>
+        <Container target="_blank" href="https://github.com/MauMor13">
             <ImageNetworks src={imgGithub} ></ImageNetworks>
-            <LinkRedes href="https://github.com/MauMor13">Git Hub: Mauricio Mores</LinkRedes>
+            <LinkRedes >MauMor13</LinkRedes>
         </Container>
-        <Container>
+        <Container target="_blank" href="mailto:mauri.f.mores@gmail.com">
             <ImageNetworks src={imgGmail} ></ImageNetworks>
-            <LinkRedes href="mailto:mauri.f.mores@gmail.com">Gmail: mauri.f.mores@gmail.com</LinkRedes>
+            <LinkRedes >mauri.f.mores@gmail.com</LinkRedes>
         </Container>
         </PersonalNetworks>
     );

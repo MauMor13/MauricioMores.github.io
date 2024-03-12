@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
 import { styled } from 'styled-components';
+import { useLocation } from 'react-router-dom';
 
 const Btn = styled.button`
     font-family: 'Aesthetic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: .5rem;
     background-color: transparent;
+    cursor: pointer;
     border: none;
     border-radius: .5rem ;
     font-size: 1rem;
     position: relative;
     overflow: hidden;
+    color: ${props => props.active ? "#8f30fd" : "#ffff"};
     transition: 1.5s all ;
     
     &:after,&:before {
@@ -42,13 +45,17 @@ const Btn = styled.button`
     `;
 
 const ButtonNav = (props) => {
+
+    const location = useLocation();
+
     return (
-        <Btn>
+        <Btn active={location.pathname == props.route}>
             {props.text}
         </Btn>
     );
 }
 ButtonNav.propTypes = {
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    route: PropTypes.string.isRequired
 }
 export default ButtonNav;

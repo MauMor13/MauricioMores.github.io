@@ -32,7 +32,7 @@ const ContentCard = styled.div`
     justify-content: space-evenly;
     align-items: center;
     background-color: #000000a3;
-    transition: all 2s;
+    transition: all 1s;
 `;
 
 const Logo = styled.img`
@@ -70,8 +70,8 @@ const ButtonCard = styled.a`
     font-family: 'Blouse','Aesthetic','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     position: relative;
+    transition: all 1.5s;
     overflow: hidden;
-    transition: all 3s;
     &:hover{
         border: 2px solid black;
         color: black;
@@ -102,8 +102,8 @@ const ButtonCard = styled.a`
     &::before{
         background-color: #8f30fd;
         content: "";
-        width: 5rem;
-        height: 4rem;
+        width: 12rem;
+        height: 6rem;
         top: -100%;
         right: 110%;
         transform: rotateZ(25deg);
@@ -113,8 +113,8 @@ const ButtonCard = styled.a`
     &::after{
         background-color: #8f30fd;
         content: "";
-        width: 5rem;
-        height: 4rem;
+        width: 12rem;
+        height: 6rem;
         top: -100%;
         left: 110%;
         transform: rotateZ(-25deg);
@@ -146,7 +146,7 @@ const CardProject = (props) => {
             <ContentCard>
                 <TitleCard> {props.title} </TitleCard>
                 <TextCard> {props.text} </TextCard>
-                {props.download != null ? <ButtonCard href={props.href} download={props.download}>More . . .</ButtonCard> : <ButtonCard href={props.href}>More . . .</ButtonCard>}
+                {props.download != null ? <ButtonCard target="_blank" href={props.href} download={props.download}>Download Project</ButtonCard> : <ButtonCard target="_blank" href={props.href}>Github Repository</ButtonCard>}
             </ContentCard>
         </Card>
     );
